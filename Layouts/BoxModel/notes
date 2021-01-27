@@ -1,0 +1,62 @@
+This is the notes for BoxModel
+
+##Box model concept
+One of the very important concepts in CSS is the
+the concept of Box model 
+
+This means that whenever the browser renders a element 
+it places that element in a invisible box.
+
+##Structure 
+at the core of the box we have the content area
+    - this is where the content is displayed 
+
+following that we have padding 
+    - this is used for adding space out side of the content area
+
+next is the border area
+    - if we have a border it is shown after these too
+
+finally we have margin area
+    - this is used to add space between different elements 
+
+this is what we call the BoxModel
+now to see them in action 
+
+first we are going To create a paragraph element and using dev tools
+if we hover over the element we see the box BoxModel
+
+the blue area is the content area and the orange is the margin area 
+the padding and border are going to be added in a second
+
+now we are going to use css to control the size of these areas
+
+*Clarifing the padding and the margin property
+
+a lot of people do not know how to use padding and margin properly
+and this is why a lot of issues occur in their layouts 
+so lets tackle this issue once and for all.
+
+we are going to duplicate the paragraph element so we can see this in action
+
+##padding
+if we hover over the first paragraph element we can see the padding area
+below the content area we can see that we have 20px of padding on the bottom
+on the second we have 20px on the top 
+
+so what is the actual space between these 2 elements?
+ - its 20px + 20px which is 40px all together 
+ 
+##Margin collapsing
+now if we change the padding to zero and margin to 20px
+we can Immediately see that the elements are closer 
+
+this is what we call margin collapsing 
+if we have 2 elements that are close to each other 
+their margins get collapse into a single margin
+
+if we were to hover over the elements with dev tools on we can see that 
+the margin collapsed or combined with each other 
+
+so technically we should be using the margin element to seperate elements 
+and the padding property to addspace between the border and the content area of a element 
