@@ -1,0 +1,43 @@
+this is the notes for Overflowing
+
+## Overflow concept
+A concept we need to know when dealing with fixed size elements is that 
+sometimes Overflow might happen.
+
+so lets say we have a container with a fixed size 
+and we have to muxh content in the container
+the container is not fitting the entire content 
+
+this is when overflow happens 
+
+so we are going to make a div to help us out with this 
+inside this div we are going to have a paragraph element with 50 words and 
+we will see overflow in action
+we can see that the text is going outside of the container 
+
+w can use the overflow property to control how overflow
+should behave 
+
+##overflow property
+if we set the overflow property to its default visible
+this is what we are currently seeing the text going out of the container 
+
+###hidden
+now if we set it to hidden the extra content will be hidden 
+
+###scroll
+another value we can use is scroll 
+we will get 2 scroll bars a horiziontal and a vertical bar 
+
+###auto
+by using this value the scroll bars will only appear if overflow happens 
+
+*important
+the overflow property is a shorthand for 2 other properties 
+overflow-x and overflow-y
+if we supply a single value it will be applied to both
+
+sometimes we are going to want to have more control over the overflow so for this 
+example we are going to place the x value to hidden now we are not going to 
+have a horizontal scroll 
+
