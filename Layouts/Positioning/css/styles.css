@@ -1,0 +1,41 @@
+body{
+    margin: 10px;
+    height: 200vh;
+}
+
+.boxes{
+    margin-top: 20px;
+    border: 3px solid lightgrey;
+    /* when we want to use the absolute value the container needs to be set to relative */
+    position: relative;
+}
+
+.box{
+    /* this is going to set the width by multiplying by the default width */
+    width:5rem;
+    height:5rem;
+}
+
+.box-one{
+    background: gold;
+    /* this sets the position of this box relative to the container  */
+    position: absolute;
+    /* when we use 0 we do not need to specify a unit */
+    right:0;
+    bottom: 0;
+}
+
+.box-two{
+    background: tomato;
+    /* moving the box relative to its original position */
+    position: relative;
+    /* adding 5rem of space to the left of the box */
+    left: 3rem;
+    top:2rem;
+    z-index: -1;
+}
+.box-three{
+    background: dodgerblue;
+    position: fixed;
+    top: 0;
+}
