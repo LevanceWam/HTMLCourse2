@@ -1,0 +1,150 @@
+this is the notes for MeasurementUnits
+
+up to this point we have been using pixels to size 
+elements but in css we have quite a few units of measurements
+that fall into 2 catergories.
+
+- absolute
+- relative
+
+##absolute
+absolute values are always fixed they never change
+examples for this include:
+- px
+- pt
+- in
+- cm 
+- mm 
+
+the last 4 units have to do with printing and they have nothing to 
+do with the web
+
+##relative
+relative units are relative to something else 
+for this catergory we have:
+- % (relative to the size of the container)
+    * these are relative to the parent element 
+- vw
+- vh
+    * both vw and vh are relative to the viewport
+- em
+- rem
+    * both are relative to the font size
+
+Overall, what we need to use is depends on what problem we 
+are trying to solve 
+
+now to use them in action 
+first we are going to create a div with a bunch of styles 
+
+##absolute units
+the size of this box is always the same no matter how big the 
+screen is so if we  look at this screen on mobile or table
+the box will stay the same size 
+
+for this reason some will argue not to use pixel values because they are not scalable
+we can't use them to create webpages that are repsonsive
+
+but We feel as if pixel values have some applications 
+so if we wanted to add a border and we didn't want anything to change 
+this would be one application
+
+##relative units 
+so we are going to set the width of the box to 50%
+this will set it 50% of the parent element 
+in this case it is the body element that is the parent 
+
+so for this we are going to set the body's width to 300px
+this will make the box 150px 
+
+now what happens if we remove the width, 
+what is the default width of the body?
+
+Well, body is a block level element so by default the width of a 
+block-level element is 100%
+this means it will take up 100% of the page 
+so the box will take up half of it 
+
+now if we resize the page the box will resize with it 
+this is the benefit of using relative units 
+
+with these we can create layouts that adjust to screen sizes
+we can create more scalable layouts 
+
+##vh and vw 
+*Question:
+    what if we wanted our box to take up the entire vertical space?
+
+Some might say set the height to 100%
+so by default the width of block-level elements is 100% right
+but the height is zero
+
+if we where to add content to the element their height will increase enough to cover the content 
+we will use a empty div for this example to see this 
+
+now lets take a look at this problem with the height 
+we want to make it to were the height of the box is 100% 
+of its parent element 
+
+now the body element which is the parent for the divs currentlty 
+doesn't have a height, so by default the height of the div3 will be 0
+so something interesting to look at is that the border is the only 
+thing that has a absolute unit 
+
+with that being said the height of the div3 element will increase to 3px
+this is why we see the border and not the box
+
+how can we make the box take up the entire available vertical space?
+
+this is where viewport units come in 
+with these units we can size our elements to the size of the viewport
+(look at div4)
+
+all we have to do is set 100% to 100vh and this will set the 
+div4 to the height of the viewport
+vw will change the width
+
+## em and rem 
+these 2 units are relative to the font sizes
+we use these units in situations where we want to adjust the layout according to the font-size
+for example if the font becomes bigger we want to increase the width as Well
+
+###em
+so if set the width to 10em 
+this means 10 x the font size of the current element 
+at the moment we do not have a font so it would inherit the font size from its parent 
+but it doesn't have one either 
+
+so body which is the parent in this case will inherit it from the html
+each browser sets a default fontsize in the html which is 16px
+so in this case it will be 10x16px which will give us 160 pixels
+
+now there is a problem with the em unit
+if we do not have a explicit font size for the element 
+we have to trace up the inheritance hierachy to figure out what fontsize 
+will be applied to the element 
+this can be very complicated and this is were we would use rem
+
+###rem
+so if we change em to rem this means 
+10 x the font size of the root element 
+now by default this is 16px
+this makes it that we only have to remember one number 
+in the hierachy
+
+now lets look at cool trick because this can also get complicated 
+we can set a rule for the html and make the font-size 62.5%
+this means 62.5% of 16px = 10px;
+
+this will make it that now all we have to do is multiply the rem by 10
+
+now here are some benefits
+now if we add some text to the div the size of te box won't change 
+and the other thing os that if the default size of the font is change the 
+box will change with it 
+
+notice that we have 3 different values in the last box and this is ok 
+we just need to understand this
+
+we use a measure unit based on the problem we are trying to solve
+
