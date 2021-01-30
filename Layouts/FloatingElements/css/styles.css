@@ -3,7 +3,7 @@ body{
 }
 
 .tweet{
-    border: 3px solid lemonchiffon;
+    border: 3px solid black;
 }
 
 .clearfix::after{
