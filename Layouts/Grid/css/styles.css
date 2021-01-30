@@ -15,12 +15,28 @@ body{
 
     /* this will will do the same thing as the above properties */
     /* the first argument rows and second column */
-    grid-template: repeat(3, 100px) / repeat(2, 100px) ;
+    /* grid-template: repeat(3, 100px) / repeat(2, 100px) ; */
+
+    /* the first column is going to take 30% of the grid and the 2nd 70% */
+    /* fr is going to take the availible space left in the grid */
+    grid-template: repeat(3, 100px) / 30fr 70fr ;
     border: 3px solid lightgrey;
+
+    /* this aligns the grid item horizontally */
+    /* justify-items: center; */
+    /* this aligns the grid item vertically */
+    /* align-items: center; */
+
+    /* aligns the grid horizontally */
+    /* justify-content: center; */
+    /* aligns the grid vertically */
+    /* align-content: center; */
+
+    width: 100vh;
 }
 
 .box{
-    width: 5rem;
-    height: 5rem;
+    /* width: 5rem;
+    height: 5rem; */
     background: gold;
 }

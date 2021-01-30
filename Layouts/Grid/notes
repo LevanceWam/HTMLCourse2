@@ -72,4 +72,82 @@ next is the column
 
 now we are going to add items to the grid 
 for this demo we are going to use some boxes 
+with some styling 
 
+As we can see the items are automatically placed
+from top left to bottom right 
+but we also have full control over the placement of these items 
+this is incredibly powerful especially on mobile 
+
+##alignment 
+so if we turn the grid overlay on notice that the 
+each grid item is aligned to the top left corner 
+of the containing cell 
+
+we can easily align these items along the horizontal or vertical axis 
+we have 2 properties we need to remember:
+    - justify-items
+        * align along the horizontal axis 
+    
+    - align-items 
+        * align along the vertical axis 
+
+these are similar to the ones that we used in flexbox 
+in grids we also have justify-content we will look into that later 
+but those 2 properties are the ones we are going to use the most 
+
+so back in the container we are going to align the grid items 
+along the horizontal axis 
+
+do using justify items we are going to set it to center 
+now the items are aligned in the center on the horizontal axis 
+now ew are going to work on the vertical axis 
+
+##aligning grid 
+if we look at the grid we can see that it is aligned to the left side of the container
+we have 2 properties to deal with this 
+    - justify-content
+        * aligns along the horizontal axis
+
+    - align-content 
+        * aligns along the vertical axis
+
+if we do not set the height of the container
+align-content will appear to be doing nothing.
+this is because the container Stretches enough to cover all of the content 
+
+**remembering the properties 
+anything with content represents the grid itself
+
+if we see items this represents the items within the grid 
+
+**Important 
+we need to remember that the default value for justify-items 
+and align-items is 'stretch'
+
+nothing is happening at the moment with this value because we 
+explicitly set the width and height in the box rule 
+
+if we remove the width  the item is going to stretch to fill its entire cell
+the same will happen for height 
+
+**making edits
+remove the width and height from box so the items can stretch
+so we are going to remove the absolute value that we have in the repeat functions 
+we are setting the first column to take 30% of the space 
+and second column to take 70%
+
+now working with % can be a little tricky because we if happen to add a absolute value to 
+the columns then our items is going to go outside of the grid
+this is because % is based on the width of the container 
+
+so what we are going to need here is a percentage of the free space 
+
+so since we are taking 100px we want 30% of whats left of the free space not 
+30% of the container 
+
+##fr unit (fraction)
+this is where the fr unit comes in 
+this will take a fraction of the availiable space 
+
+so as a best practice we should use fr instead over %
