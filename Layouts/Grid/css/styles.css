@@ -1,0 +1,26 @@
+body{
+    margin: 10px;
+}
+
+.container{
+    display: grid;
+
+    /* 3 x 2 grid */
+    /* we use this property to define the size and number of row/column */
+    /* so 3 columns 100px tall and 2 columns 100px wide */
+    /* using the repeat function this helps us keep our code dry */
+    /* the first agrument is the number of rows/columns and the 2nd the size */
+    /* grid-template-rows: repeat(3, 100px) ;
+    grid-template-columns: repeat(2, 100px); */
+
+    /* this will will do the same thing as the above properties */
+    /* the first argument rows and second column */
+    grid-template: repeat(3, 100px) / repeat(2, 100px) ;
+    border: 3px solid lightgrey;
+}
+
+.box{
+    width: 5rem;
+    height: 5rem;
+    background: gold;
+}
