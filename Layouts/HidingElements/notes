@@ -1,0 +1,29 @@
+This is the notes for HidingElements
+
+Lets learn how to hide elements
+we are going to use 2 paragraph elements 
+
+now we are going to hid e the first one
+we are going to give it a special class 
+or use a pseudo class selector
+
+now lets go define some rules 
+we have 2 properties for hiding a element 
+**it is important for us to understand the differences 
+
+## Using display property
+the one that we use most of the time is display 
+we can set its value to none and the paragraph disappears
+
+## visibility property
+In contrast we can use the visibility property
+the default value is visible, but we can set this to hidden
+noticed that when we use the property the item is gone but the 
+space allocated for the paragraph is still there 
+
+this is why the second paragraph is appearing so far down 
+
+##In short
+The display hidden method hides the element like it was never there 
+but the visibility property will just have the element hidden
+the space allocated will still be there
