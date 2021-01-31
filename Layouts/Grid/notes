@@ -203,3 +203,35 @@ we can also have it start from one row and end in another
 
 ##grid-area
 this has a weird syntax so we have to pay attention to this 
+so we have to type for numbers 
+    - start/end
+    - each part contains a row and a column
+
+## placing named areas
+another way of placing items is by defining 
+specific areas in the grid and then placing the items in those areas
+
+for this we have 2 properties:
+    - grid-template-areas
+        * this is used to define the areas on the container
+
+    - grid-area 
+        * for indiviual items we set this property to the area we want it in 
+
+##grid-template-areas
+*this property goes in the container 
+
+for the values we add some quotes ("") this is going to represent the 
+first cell in the quotes we can pass the name of the cells inside and seperate them 
+with a space 
+
+each quote represents a cell
+
+##grid-area 
+now in the grid item we call this property and 
+set the value to one of the names we gave the cells to place the item in that cell
+
+so for this we are going to set div 1 inside of 
+header template area
+notice that we only have to write header once and the item will span across the 
+cell 

@@ -21,6 +21,13 @@ body{
     /* fr is going to take the availible space left in the grid */
     grid-template: 100px auto 100px / 30fr 70fr ;
 
+    /* this is setting the name of the cells */
+    /* the first set of quotes is the first cell  */
+    grid-template-areas:
+     "header  header" 
+     "sidebar main" 
+     "footer  footer";
+
     /* gives us a row gap between the rows */
     /* row-gap: 10px; */
     /*  gives us a column gap between the rows  */
@@ -53,5 +60,17 @@ body{
 .box-one{
     /* we are having this cell span across the columns */
     /* so it starts at 1 and ends at line 3 */
-    grid-column: 1 / 3;
+    /* grid-column: 1 / 3; */
+
+    /* this will span this item across the cell like thw above property */
+    grid-area: header;
+
+    /* four values */
+    /* start/end */
+    /* each part contains a row and a column  */
+    /* grid-area: 1/ 1 / 1 / 3; */
+}
+
+.box-four{
+    grid-area: footer;
 }
