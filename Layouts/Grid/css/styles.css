@@ -19,7 +19,16 @@ body{
 
     /* the first column is going to take 30% of the grid and the 2nd 70% */
     /* fr is going to take the availible space left in the grid */
-    grid-template: repeat(3, 100px) / 30fr 70fr ;
+    grid-template: 100px auto 100px / 30fr 70fr ;
+
+    /* gives us a row gap between the rows */
+    /* row-gap: 10px; */
+    /*  gives us a column gap between the rows  */
+    /* column-gap: 10px;   */
+
+    /* shorthand for the 2 properties above */
+    gap:10px;
+
     border: 3px solid lightgrey;
 
     /* this aligns the grid item horizontally */
@@ -32,11 +41,17 @@ body{
     /* aligns the grid vertically */
     /* align-content: center; */
 
-    width: 100vh;
+    height: 85vh;
 }
 
 .box{
     /* width: 5rem;
     height: 5rem; */
     background: gold;
+}
+
+.box-one{
+    /* we are having this cell span across the columns */
+    /* so it starts at 1 and ends at line 3 */
+    grid-column: 1 / 3;
 }

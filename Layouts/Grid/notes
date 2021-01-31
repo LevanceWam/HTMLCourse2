@@ -151,3 +151,55 @@ this is where the fr unit comes in
 this will take a fraction of the availiable space 
 
 so as a best practice we should use fr instead over %
+
+* Now lets go back and make changes to the rows 
+the first row is going to be 100px
+the second row which is going to store the sidebar and the main content to be set to auto
+so it can grow and fill the entire space 
+
+for the footer we can use 100px as well
+now if we resize the window the second column will 
+change in size while the other 2 will stay the same 
+
+##applying gaps between rows and colums 
+for this we have 3 properties:
+    - row-gap
+    - column-gap
+    - gap (shorthand)
+
+##placing items 
+now we are going to be looking into placing items in a grid
+for this we have 3 properties:
+    - grid-row
+    - grid-column
+    - grid-area (shorthand)
+
+by setting these properties on a item 
+we can control where exactly that item should be placed 
+
+so for example lets say we want to let the first item 
+take up the entire first row 
+so first we are going to add another class to the first item
+
+##grid-column
+next we are going to add the grid-column property and add 2
+now the first item is going to go to the second column
+and we have a empty space where it use to be 
+
+the other items are automatically placed from top left to bottom right
+so we are going to move the first item back
+
+now if we turn on the line numbers we are going to want to have the first item start from line 1 to line 3
+now by default an item only takes one cell 
+of we want it to take more than one cell 
+we add a '/' and type the end line number so in this casee it is 3 
+
+we can also go backwards -1 = the last column 
+we can aslo use span and how many cells it will takes
+
+##grid-row 
+we can use this to move which row the item is in 
+we can also have it start from one row and end in another 
+
+##grid-area
+this has a weird syntax so we have to pay attention to this 
