@@ -1,0 +1,115 @@
+this is the notes for MediaQueries
+
+##MediaQueries
+with media queries we can provide different styles for 
+different devices depending on their features 
+such as screen size, orientation, and etc
+
+with this we can build webpages that look awesome 
+on mobile devices, tablets annd desktop computers we call this a 
+responsive website 
+
+##responsive Design
+they are called responsive websites because they respond to various screen
+sizes
+
+to build a responsive website we need two approaches
+    - build desktop first
+        * later we would adjust the layout for tables 
+        and mobile later 
+
+    - build mobile first
+        * then adjust the layout for tablets and desktops 
+        majority of the community favors mobile first
+
+        *this is because its much easier to build a simple web page for mobile and then 
+        if we have extra space we can add in extra stuff 
+
+so if we decided to do desktop first and we make a complex site 
+we might have to squeeze a lot of things. so the images look good on mobile
+its doable but not recommended
+
+##building a site using media queries 
+we are going to look at building the sites shown in the screenshots 
+
+we are going to make a container with 2 divs inside with paragraph elements 
+inside of that 
+
+we are going to use flex on the container div
+    * remember that flex direction is set to row by default 
+    so we are going to have to set the direction to column for mobile 
+
+then we are going to have to use media queries to see if the screen is wider than lets say 500px
+then we are going to set flex to row so the items will appear next to eachother 
+
+##styles 
+in the css we are going to define some styles 
+after we apply some we are going to see we have 
+
+so far the 2 divs are stacked on each other
+
+now on devtools we are going to click the device simulation
+we can also pick the type of device we want to emulate 
+we can also rotate the screen
+
+##breakpoints 
+so if we resize the browser window and make it really small 
+as we start to increase the size the at some point our design is going to break
+we should aim for this moment to add our breakpoint 
+
+* A breakpoint is the point at which our design breaks down
+
+we are going to use media queries to write specific stats for 
+devices that are wider than our breakpoint 
+
+in devtools if we resize the window we can see the current size of the viewport 
+so at 629px we are going to want to put the boxes next to each other 
+lets go implement this 
+
+##media query implementation 
+so first we start with the '@media' rule'
+then we type the query
+
+A query can have multiple parts si with each part 
+we're asking somethoing about the target device 
+
+the first part is the type of the device  which can be 
+    - screen (web browsers)
+    - print (this targets printers)
+for this we are going with screen we will talk about print later 
+
+Second part of the query,
+we need to use the "and" operator and in parenthesis 
+we type a condition we want to see of the screen is wider than 600px
+so we say min-width 600px
+
+so if this query is true then the size of it defined inside of the curly braces
+will be applied otherwise they are going to be ignored
+inside of these braces we are overidding the rules we applied to the page 
+
+one of the mistake a lot of people make is that they find tables on the internet where they can find common 
+breakpoints. the problem with this is that these numbers are based on the current devices that are out 
+if a new device with 5 or 10 pixels wider or narriiow we are going to have to have to 
+adjust the design for each release and we do not want to do that 
+
+the numbers for our breakpoint should depend on the design 
+do not blindly pick break points 
+
+we can extend our current query to find the max
+
+now we are going to add another break point for 900px 
+now if the screen is wider than 900 we will get a different look
+
+so the changes we apply are dependant on our design and how it should look 
+across different devices there is no right or wrong
+
+
+##MediaQueries print 
+we can aslo apply media queries that will apply to printers 
+
+##end
+
+so using media queries we can query certian properties of a device 
+like its type, its width, and so on 
+and provide styles that will only apply if 
+those properties are meet
