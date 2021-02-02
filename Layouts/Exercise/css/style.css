@@ -14,7 +14,7 @@ body{
     gap: 8px;
 }
 
-img{
+img{ 
     width: 100%;
     object-fit: cover;
     border-radius: 10px;
@@ -23,6 +23,7 @@ img{
 /* tablets styling */
 @media screen and (min-width: 768px){
     .container{
+        /* creating 2 columns for the tablet view */
         grid-template-columns: repeat(2, 1fr);
     }
 }
