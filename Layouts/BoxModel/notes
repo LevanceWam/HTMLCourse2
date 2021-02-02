@@ -53,7 +53,7 @@ we can Immediately see that the elements are closer
 
 this is what we call margin collapsing 
 if we have 2 elements that are close to each other 
-their margins get collapse into a single margin
+their margins get collapse into a single margin.
 
 if we were to hover over the elements with dev tools on we can see that 
 the margin collapsed or combined with each other 

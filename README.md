@@ -18,7 +18,7 @@ This is all important stuff.
 
 ## Table of Contents
 
-- [Layouts]()
+- [Layouts](https://github.com/LevanceWam/HTMLCourse2/tree/main/Layouts)
 - [Typography]()
 - [Images]()
 - [Forms]()
