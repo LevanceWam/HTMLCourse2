@@ -15,7 +15,7 @@ inside this div we are going to have a paragraph element with 50 words and
 we will see overflow in action
 we can see that the text is going outside of the container 
 
-w can use the overflow property to control how overflow
+we can use the overflow property to control how overflow
 should behave 
 
 ##overflow property
