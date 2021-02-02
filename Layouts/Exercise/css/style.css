@@ -9,6 +9,7 @@ body{
 
 /* mobile styling  */
 .container{
+    /* do not need to apply a template here will go into column by default */
     display: grid;
     gap: 8px;
 }
