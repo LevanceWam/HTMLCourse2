@@ -70,8 +70,8 @@ lets go implement this
 so first we start with the '@media' rule'
 then we type the query
 
-A query can have multiple parts si with each part 
-we're asking somethoing about the target device 
+A query can have multiple parts so with each part 
+we're asking something about the target device 
 
 the first part is the type of the device  which can be 
     - screen (web browsers)

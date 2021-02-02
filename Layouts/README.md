@@ -448,3 +448,90 @@ This is a shorthand property for grid-template-rows & grid-template-columns.
     grid-area: footer;
 }```
 ````
+
+## Media Queries
+
+> Overview of media queries
+
+With media queries we can provide different styles for different devices depending on their features. Such as screen size, orientation, and etc.
+
+With this we can build webpages that look awesome on mobile devices, tablets annd desktop computers we call this a responsive website.
+
+to build a responsive website we have two approaches:
+
+    - build desktop first
+        * later we would adjust the layout for tables and mobile later.
+
+    - build mobile first
+        * then adjust the layout for tablets and desktops majority of the community favors mobile first.
+
+        * this is because its much easier to build a simple web page for mobile and then if we have extra space we can add in extra stuff.
+
+so if we decided to do desktop first and we make a complex site we might have to squeeze a lot of things, so the images look good on mobile its doable but not recommended.
+
+### breakpoints:
+
+So if we resize the browser window and make it really small as we start to increase the size the at some point our design is going to break. We should aim for this moment to add our breakpoint.
+
+- A breakpoint is the point at which our design breaks down.
+
+We use media queries to write specific stats for devices that are wider than our breakpoint.
+
+### media query implementation:
+
+so first we start with the '@media' rule then we type the query. A query can have multiple parts so with each part we're asking something about the target device.
+
+The first part is the type of the device which can be:
+
+- screen (web browsers)
+- print (this targets printers)
+
+Second part of the query, we need to use the "and" operator and in parenthesis. We type a condition we want to see of the screen is wider than 600px, so we say min-width 600px.
+
+If the query is true then the style defined inside of the curly braces
+will be applied otherwise they are going to be ignored. Inside of these braces we are overidding the rules we applied to the page.
+
+One of the mistake a lot of people make is that they find tables on the internet where they can find common
+breakpoints. the problem with this is that these numbers are based on the current devices that are out. If a new device with 5 or 10 pixels wider or narriiow we are going to have to have to adjust the design for each release and we do not want to do that.
+
+The numbers for our breakpoint should depend on the design do not blindly pick break points.
+
+```css
+/* this is our mobile first approach */
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.box {
+  background: gold;
+  padding: 1rem;
+}
+
+/* this will target the second occurrence of an element with a class of box */
+.box:nth-of-type(2) {
+  background-color: dodgerblue;
+}
+
+/* here we are targeting the size of the viewport */
+/* if the width of the viewport is greater than 600px these rules will be applied  */
+@media screen and (min-width: 600px) {
+  .container {
+    flex-direction: row;
+  }
+}
+
+/* if the width of the viewport is greater than 900px these rules will be applied  */
+@media screen and (min-width: 900px) {
+  .container {
+    flex-direction: row-reverse;
+  }
+
+  .box {
+    background: orange;
+    color: whitesmoke;
+  }
+}
+```
+
+[Repo Home](https://github.com/LevanceWam/HTMLCourse2)
