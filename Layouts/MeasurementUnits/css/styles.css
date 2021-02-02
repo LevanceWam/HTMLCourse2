@@ -18,7 +18,7 @@ body{
 }
 
 .box2{
-    /* 50% of the widtg if of the parent */
+    /* 50% of the width if of the parent */
     /* it will be 150px because the body is currently 300px this is going to be removed */
     width: 50%;
     height: 100px;

@@ -68,3 +68,95 @@ Important values:
   overflow: hidden auto;
 }
 ```
+
+## Measurement Units
+
+In CSS we have a few measurement units. That can be broken up into 2 catergories.
+
+- absolute
+- relative
+
+### Absolute
+
+Absolute values are always fixed they never change.
+examples for this include:
+
+- px
+- pt
+- in
+- cm
+- mm
+
+The last 4 units have to do with printing and they have nothing to do with the web.
+
+### Relative
+
+Relative units are relative to something else.
+
+For this catergory we have:
+
+- %, (relative to the size of the container)
+  - these are relative to the parent element
+- vw & vh
+  - both vw and vh are relative to the viewport
+- em & rem
+  - both are relative to the font size
+
+\*\* Cool Tip:
+
+if we set a rule for the html and make the font-size 62.5%
+this means 62.5% of 16px = 10px;
+
+this will make it a little easier when calculating the pxs when using rem.
+
+```css
+.box {
+  /* using px values this box will stay the same size on all devices */
+  /* this is known as absolute values */
+  width: 100px;
+  height: 100px;
+}
+
+.box2 {
+  /* 50% of the width if of the parent */
+  /* it will be 150px because the body is currently 300px this is going to be removed */
+  width: 50%;
+  height: 100px;
+}
+
+.box3 {
+  width: 50%;
+  /* this is not going to show a box because we did not set the height of the parent */
+  height: 100%;
+}
+
+.box4 {
+  /* these units will take up the width and height of the viewport */
+  width: 50vw;
+  height: 100vh;
+}
+
+.box5 {
+  /* this will multiply the font size by 10 to give us a width */
+
+  /* but because this element does not have a font size to go off of 
+    it will inherit from the body element which will inherit from the html because body doesn't have a font-size either */
+
+  /* so the width will be 10x16px because it is the default fontsize */
+  width: 10em;
+  height: 100vh;
+}
+
+.box6 {
+  /* the width will now be 200px */
+  font-size: 20px;
+  width: 10em;
+  height: 50vh;
+}
+
+.box7 {
+  /* 15 x font size of the root element (html)*/
+  width: 15rem;
+  height: 50vh;
+}
+```
