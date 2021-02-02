@@ -241,3 +241,104 @@ for example. A navbar that always stays on the top
   top: 0;
 }
 ```
+
+## FlexBox
+
+> This is a layout method
+
+- Used for laying out elements in one direction like in a row or column.
+
+- This is a lot easier and simpler than floats.
+
+The most common use for flexbox is navigation bars because in navigation bars. We have a bunch of menu items (hyperlinks) laid out horizontally.
+
+First we go to the container (parent element) and set the display to flex. This will layout the boxes horizontally
+we didn't have to use floats and worry about parent collapsing.
+
+We can layout a bunch of elements in one direction either in a row or in a column.
+
+### flex-direction:
+
+By using the flex direction property
+we can control the direction of the layout
+
+By default it is row but we can set this to:
+
+- column
+- column-reverse
+- row
+- row-reverse
+
+### Alignment:
+
+Now we are going to look into alignment to align items. We need to understand the concept of axes in flex.
+
+In flex we have 2 axes:
+
+1. main(primary) axis
+2. cross(secondary) axis
+
+These axes are dependant on the direction.
+
+#### direction: row:
+
+if we set the direction to row:
+
+    * The main axis is going to be the horizontal axis and cross is going to be the vertical axis.
+
+#### direction: column:
+
+if we set the direction to column:
+
+    * The main axis is going to be the vertical axis. The cross axis is going to be the horizontal axis.
+
+Why does this matter?
+
+By using these axes we can easily align items inside of their container.
+
+#### aligning items:
+
+when we are aligining items there are 2 properties we need remember:
+
+1.  justify-content
+
+    - used to align items along the main axis
+
+2.  align-items
+    - used to align items along the cross axis
+
+Just understand that we have 2 properties for alignment justify-content and align-items. These are the properties we use most of the time.
+
+it was not always this easy in the past but flex all we have to do is set these 4 properties:
+
+    - display: (flex)
+    - flex-direction
+    - justify-content
+    - align-items
+
+```css
+.container {
+  margin-top: 1rem;
+  border: 3px solid lightgrey;
+  /* this lays out the boxes horiziontally in our code */
+  display: flex;
+  /* by default the value is set to row but we can change this */
+  flex-direction: row;
+  /* default value is flex start but by setting this to the end */
+  /* this will show up at the end of the row */
+  justify-content: flex-end;
+}
+
+.container2 {
+  border: 3px solid lightgrey;
+  display: flex;
+  flex-direction: row;
+  /* this aligns the items in the center */
+  justify-content: center;
+  /* aligning the items on the secondary axis */
+  /* this doesn't work right away if we do not have space */
+  align-items: center;
+  /* setting the height of container to 90% of viewport */
+  height: 45vh;
+}
+```
