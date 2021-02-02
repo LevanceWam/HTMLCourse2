@@ -1,0 +1,43 @@
+html {
+    font-size: 62.5%;
+}
+
+body{
+    margin: 10px;
+}
+
+/* mobile approach */
+.container{
+    display: grid;
+    gap: 5px;
+}
+
+img{
+    /* making sure the img is taking is the width of the container  */
+    width: 100%;
+    /* making sure the img doesn't look squished   */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* tablet view */
+@media screen and (min-width: 768px){
+    .container{
+        /* this will create 2 columns and use 1% of the available space */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* desktop view */
+@media screen and (min-width: 1024px){
+    .container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    img:nth-of-type(3){
+        /* from the second column we want to take 4 spaces */
+        grid-column: 2/4;
+        /* on the first row take 3 spaces  */
+        grid-row: 1/3;
+    }
+}
