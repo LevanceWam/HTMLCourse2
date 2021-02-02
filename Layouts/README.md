@@ -71,12 +71,14 @@ Important values:
 
 ## Measurement Units
 
+> CSS measurement units
+
 In CSS we have a few measurement units. That can be broken up into 2 catergories.
 
 - absolute
 - relative
 
-### Absolute
+### Absolute:
 
 Absolute values are always fixed they never change.
 examples for this include:
@@ -89,7 +91,7 @@ examples for this include:
 
 The last 4 units have to do with printing and they have nothing to do with the web.
 
-### Relative
+### Relative:
 
 Relative units are relative to something else.
 
@@ -158,5 +160,84 @@ this will make it a little easier when calculating the pxs when using rem.
   /* 15 x font size of the root element (html)*/
   width: 15rem;
   height: 50vh;
+}
+```
+
+## Positioning
+
+> positioning elements with css
+
+    - relative: relative to the elements normal position other elements are not affected
+
+    - absolute: position a element relative to the parent element
+
+    - fixed: position a element relative to the viewport
+
+### Position property:
+
+now by default the position of all elements is static
+this means they are not positioned they appear in their normal position
+
+### z-index:
+
+By setting the z-index (zed-index) property to a positive or negative value to move the box along the zed axis.
+
+on webpages we have 3 axis:
+
+- horizontal axis (x-axis)
+- vertical axis (y axis)
+- zed axis(z-axis) \* this axis represents the depth
+
+Think of it like a line that comes from the screen towards your eyes
+by default the zed index of all properties is 0. If we set it to a positive value like one it comes closer to us. If we set it to a negative value it will move away from us. The higher or lower the number on the Z axis. The higher or lower The element will move up or down to axis.
+
+### Absolute positioning:
+
+This is contrast to relative positioning with absolute positioning. We can position a element relative to its container.
+
+**_so first we need to set the position of the container to
+relative this is very important_**
+
+### Fixed positioning
+
+now sometimes we are going to want to set a element relative to the viewport
+for example. A navbar that always stays on the top
+
+```css
+.boxes {
+  margin-top: 20px;
+  border: 3px solid lightgrey;
+  /* when we want to use the absolute value the container needs to be set to relative */
+  position: relative;
+}
+
+.box {
+  /* this is going to set the width by multiplying by the default width */
+  width: 5rem;
+  height: 5rem;
+}
+
+.box-one {
+  background: gold;
+  /* this sets the position of this box relative to the container  */
+  position: absolute;
+  /* when we use 0 we do not need to specify a unit */
+  right: 0;
+  bottom: 0;
+}
+
+.box-two {
+  background: tomato;
+  /* moving the box relative to its original position */
+  position: relative;
+  /* adding 5rem of space to the left of the box */
+  left: 3rem;
+  top: 2rem;
+  z-index: -1;
+}
+.box-three {
+  background: dodgerblue;
+  position: fixed;
+  top: 0;
 }
 ```
