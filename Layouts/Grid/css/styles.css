@@ -1,0 +1,76 @@
+body{
+    margin: 10px;
+}
+
+.container{
+    display: grid;
+
+    /* 3 x 2 grid */
+    /* we use this property to define the size and number of row/column */
+    /* so 3 columns 100px tall and 2 columns 100px wide */
+    /* using the repeat function this helps us keep our code dry */
+    /* the first agrument is the number of rows/columns and the 2nd the size */
+    /* grid-template-rows: repeat(3, 100px) ;
+    grid-template-columns: repeat(2, 100px); */
+
+    /* this will will do the same thing as the above properties */
+    /* the first argument rows and second column */
+    /* grid-template: repeat(3, 100px) / repeat(2, 100px) ; */
+
+    /* the first column is going to take 30% of the grid and the 2nd 70% */
+    /* fr is going to take the availible space left in the grid */
+    grid-template: 100px auto 100px / 30fr 70fr ;
+
+    /* this is setting the name of the cells */
+    /* the first set of quotes is the first cell  */
+    grid-template-areas:
+     "header  header" 
+     "sidebar main" 
+     "footer  footer";
+
+    /* gives us a row gap between the rows */
+    /* row-gap: 10px; */
+    /*  gives us a column gap between the rows  */
+    /* column-gap: 10px;   */
+
+    /* shorthand for the 2 properties above */
+    gap:10px;
+
+    border: 3px solid lightgrey;
+
+    /* this aligns the grid item horizontally */
+    /* justify-items: center; */
+    /* this aligns the grid item vertically */
+    /* align-items: center; */
+
+    /* aligns the grid horizontally */
+    /* justify-content: center; */
+    /* aligns the grid vertically */
+    /* align-content: center; */
+
+    height: 100vh;
+}
+
+.box{
+    /* width: 5rem;
+    height: 5rem; */
+    background: gold;
+}
+
+.box-one{
+    /* we are having this cell span across the columns */
+    /* so it starts at 1 and ends at line 3 */
+    /* grid-column: 1 / 3; */
+
+    /* this will span this item across the cell like thw above property */
+    grid-area: header;
+
+    /* four values */
+    /* start/end */
+    /* each part contains a row and a column  */
+    /* grid-area: 1/ 1 / 1 / 3; */
+}
+
+.box-four{
+    grid-area: footer;
+}

@@ -1,0 +1,46 @@
+html {
+    font-size: 62.5%;
+}
+
+body{
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+}
+
+/* Mobile first approach */
+
+/* the container for the navbar */
+/* do not need the width here takes up the whole page width */
+.header{
+    color: rgb(206, 205, 205);
+    background-color: black;
+    padding: 0.7rem;
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+li{ 
+    /* this is going to add 5pxs to the top and bottom of the li elements */
+    margin: .5rem 0;
+}
+
+/* for screens bigger than 768px */
+@media screen and (min-width: 768px){
+    ul{
+        /* change the flex direction and move it to the end of the container */
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-right: 0.6rem;
+    }
+
+    li{    
+        padding:0.6rem;
+    }
+}

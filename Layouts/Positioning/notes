@@ -1,0 +1,126 @@
+This is the notes for Positioning
+
+Going forward we are going to talk about various techniques to position elements 
+and creating layouts
+
+in this lecture we are going to look at 
+presizing and Positioning elements on the screen
+
+so we are going to start with a parent div with 3 divs as child elements
+
+*note:
+    each element can have multiple classes we seperate them by space 
+
+    now we have a box that has 3 different boxes with different colors 
+
+    now in this lesson we are using abstract boxes
+    but in a real scenario these boxes can be anything
+    images, headings, paragraphs
+    this is Irrelevant we are just worried about positioning 
+
+now lets say we want to take the second box and position it a little to the right 
+this is where we would use the position property
+
+##position property
+now by default the position of all elements is static
+this means they are not positioned they appear in their normal position 
+
+so the first thing we should do is set the property to relative
+so we can position this element relative of its normal position
+now we can use the properties:
+    - top
+    - left
+    - right 
+    - bottom to move the element around
+
+so we are going to add 5rem of space to the left of the 2nd box
+we can aslo use negative values here too
+
+this is a popular technique for elements that are intially off the screen
+then using some fancy animations they pop into existence
+
+now just because we are using a rem unit here does not mean we need to always use it 
+the unit we use depends on what we are building 
+sometimes pixels makes sense other times % and so on
+right is just like setting the left property to negative 
+
+we also have top and bottom
+we can add spaces to these too
+
+now something that we need to notice here is that box one and 3 are still in the same position
+they are not affected by us moving around box 3
+
+also notice that we have overlapping 
+box 2 is appearing to be on top of box1 
+because it comes last in the dom
+
+this can be changed by moving the stacking order of the elements 
+
+##z-index
+by setting the z-index (zed-index) property to a positive or negative value to move the box 
+along the zed axis
+
+on webpages we have 3 axis:
+    - horizontal axis (x-axis)
+    - vertical axis (y axis)
+    - zed axis(z-axis)
+        * this axis represents the depth
+
+think of it like a line that comes from the screen towards your eyes 
+by default the zed index of all properties is 0
+if we set it to a positive value like one it comes closer to us
+if we set it to a negative value it will move away from us 
+
+The higher or lower the number on the Z axis
+The higher or lower The element will move up or down to axis
+
+##absolute positioning
+This is contrast to relative positioning
+with absolute positioning we can position a element 
+relative to its container 
+
+***so first we need to set the position of the container to 
+relative this is very important***
+
+next in the box-one we are going to 
+set the position to absolute set the trbl values that we are using to 0
+
+now box one is positioned relative to its container 
+notice that box 3 moved up because we are absolute postioning the yellow box
+
+this is happening because when we absolute position an element
+that element is removed from the normal flow of the page 
+
+so from the parents element's point of view that element does not exist 
+imagine that it is on a seperate layer
+
+so this container only sees the other 2 boxes
+
+##fixed positioning
+now sometimes we are going to want to set a element relative to the viewport
+for example 
+    A navbar that always stays on the top
+
+so now we should set the position property to fix 
+we will do this to box 3
+
+now we can see that the box is out of the container because it 
+is position relative to the viewport
+which is the visible area of the browser
+this means that the box is going to stay at the top of the page always 
+
+to test this we are going to set the height of the 
+body element to 200vh (200% of the viewport)
+
+##
+there are 2 ways to set the size of position elements 
+one way is to set the width and the height properties
+which we have been doing up this point 
+
+another way is to use the combination of left/right and top/bottom 
+
+##Recap
+Postitining 
+    - relative: relative to the elements normal position other elements are not affected
+    - absolute: position a element relative to the parent element
+    - fixed: position a element relative to the viewport

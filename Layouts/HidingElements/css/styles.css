@@ -1,0 +1,11 @@
+body{
+    margin: 10px;
+}
+
+.first{
+    /* this hides the element like it was never there */
+    /* display: none; */
+
+    /* this will hide the element but the space allocated for the element will still be there */
+    visibility: hidden;
+}

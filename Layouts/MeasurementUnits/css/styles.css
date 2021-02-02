@@ -1,0 +1,71 @@
+html{
+    /* 62.5% of 16px = 10px */
+    font-size: 62.5%;
+}
+
+body{
+    margin: 10px;
+    /* width: 300px; */
+}
+
+.box{
+    /* using px values this box will stay the same size on all devices */
+    /* this is known as absolute values */
+    width: 100px;
+    height: 100px;
+    background-color: goldenrod;
+    border-top: 3px solid gold;
+}
+
+.box2{
+    /* 50% of the widtg if of the parent */
+    /* it will be 150px because the body is currently 300px this is going to be removed */
+    width: 50%;
+    height: 100px;
+    background-color: teal;
+    border-top: 3px solid lightsteelblue;
+}
+
+.box3{
+    width: 50%;
+    /* this is not going to show a box because we did not set the height of the parent */
+    height: 100%;
+    background-color: rebeccapurple;
+    border-top: 3px solid pink;
+}
+
+.box4{
+    /* these units will take up the width and height of the viewport */
+    width: 50vw;
+    height: 100vh;
+    background-color: orange;
+    border-top: 3px solid orangered;
+}
+
+.box5{
+    /* this will multiply the font size by 10 to give us a width */
+    /* but because this element does not have a font size to go off of 
+    it will inherit from the body element which will inherit from the html because body doesn't have a font-size either */
+    /* so the width will be 10x16px because it is the default fontsize */
+    width: 10em;
+    height: 100vh;
+    background-color: green;
+    border-top: 3px solid greenyellow;
+}
+
+.box6{
+    /* the width will now be 200px */
+    font-size: 20px;
+    width: 10em;
+    height: 50vh;
+    background-color: red;
+    border-top: 3px solid thistle;
+}
+
+.box7{
+    /* 15 x font size of the root element (html)*/
+    width: 15rem;
+    height: 50vh;
+    background-color: peru;
+    border-top: 3px solid tan;
+}

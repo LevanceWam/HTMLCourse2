@@ -1,0 +1,72 @@
+body{
+    margin: 10px;
+}
+
+div{
+    margin-bottom: 0.3rem;
+}
+
+.container{
+    margin-top: 1rem;
+    border: 3px solid lightgrey;
+    /* this lays out the boxes horiziontally in our code */
+    display: flex;
+    /* by default the value is set to row but we can change this */
+    flex-direction: row;
+    /* default value is flex start but by setting this to the end */
+    /* this will show up at the end of the row */
+    justify-content: flex-end;
+}
+
+.container2{
+    border: 3px solid lightgrey;
+    display: flex;
+    flex-direction: row;
+    /* this aligns the items in the center */
+    justify-content: center;
+    /* aligning the items on the secondary axis */
+    /* this doesn't work right away if we do not have space */
+    align-items: center;
+    /* setting the height of container to 90% of viewport */
+    height: 45vh;
+}
+
+.container3{
+    border: 3px solid lightgrey;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 45vh;
+    /* this wraps the items in the flex container so it wont be added on one line  */
+    flex-wrap: wrap;
+    /* aligns the content as a whole in the center because we have multiple lines  */
+    align-content: center;
+}
+
+.container4{
+    border: 3px solid lightgrey;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 45vh;
+}
+
+.box-one{
+    /* this is a property that we apply to a flex item */
+    align-self:flex-start ;
+}
+
+
+.box{
+    /* this is going to overide either the width or height depending on the direction */
+    flex-basis: 15rem;
+    /* this affects the growth of the flex items  */
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 5rem;
+    height: 5rem;
+    background: gold;
+    margin: 1rem;
+}

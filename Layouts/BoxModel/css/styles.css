@@ -1,0 +1,6 @@
+p{
+    /* we can set 4 values just like the border property trbl */ 
+    /* this is the same as 10px 20px 10px 20px this is the short form */
+    padding: 0px; /* this represents vertial and horizontal padding */
+   margin: 20px;
+}

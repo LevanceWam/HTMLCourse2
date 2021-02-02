@@ -1,0 +1,255 @@
+This is the notes for FlexBox
+
+#FlexBox (Flexible Box Layout)
+This is a layout method
+    - Used for laying out elements in one direction like in a row or column 
+    - this is a lot easier and simpler than floats
+
+So we are going to start with a div with the class of container 
+then inside of this we are going to have 3 divs with the class of box and a label 
+
+Next we are going to define some rules
+
+now if we look at what we have the 3 boxes are layed out 
+vertically, but what if we wanted them to be layout horizontally?
+this is where flexbox comes in 
+
+The most common use for flexbox is navigation bars 
+because in navigation bars we have a bunch of menu items (hyperlinks)
+laid out horizontally 
+
+##getting started
+
+first we go to the container (parent element) and set the display to flex
+this will layout the boxes horizontally
+we didn't have to use floats and worry about 
+parent collapsing 
+
+we can layout a bunch of elements in one direction 
+either in a row or in a column
+
+##flex-direction
+by using the flex direction property
+we can control the direction of the layout 
+by default it is row but we can set this to:
+    - column or column-reverse
+we even have [row-reverse] this reverses the boxes in a row and they are pushed to the right 
+this is helpful for right to left languages 
+
+##alignment 
+now we are going to look into alignment 
+to align items we need to understand the concept of 
+axes in flex
+
+in flex we have 2 axes:
+    1. main(primary) axis
+    2. cross(secondary) axis
+
+these axes are dependant on the direction
+
+###direction: row
+if we set the direction to row 
+    * the main axis is going to be the horizontal axis 
+    and cross is going to be the vertical axis 
+
+###direction: column
+if we set the direction to column 
+    *the main axis is going to be the vertical axis
+    the cross axis is going to be the horizontal axis 
+
+why does this matter?
+By using these axes we can easily align items 
+inside of their container 
+
+##aligning items 
+when we are aligining items there are 2 properties we need remember
+    1. justify-content
+        * used to align items along the main axis 
+
+    2. align-items 
+        * used to align items along the cross axis 
+
+there is another property called align-content
+which we will look into shortly 
+
+just understand that we have 2 properties for alignment 
+justify-content and align-items 
+these are the properties we use most of the time 
+
+##justify-content
+now back to the code 
+lets say we want to move the content to the end of the 
+horizontal axis
+
+this is were justify-content property comes in 
+so for this we are going to set the value to flex-end 
+by default it is flex-start
+
+we can also use the value 'center'
+this will align the items to the center 
+
+we can also distribute the items along the horizontal axis 
+so we have 3 properties :
+    - space-evenly
+        * this distributes the items with equal spacing between them 
+    - space-between
+        * the first and the last items are pushed to the ends of the horizontal axis
+        the other items are distributed with equal space between them 
+
+    - space-around
+
+we dont have to remember any of these we can always come back and play with the values 
+
+##align items 
+using the align-items property we can align the items 
+along the cross or secondary axis 
+the default is flex start but if we use flex end
+to push them to the end of the vertical axis 
+nothing happens right away because there is not enough space in
+the container 
+
+the container is tall enough just to hold these boxes 
+this brings us to another important concept
+in flex
+
+** even though we see the display property to flex
+the container is still a block-level element 
+so by default it gets tall enough to cover the childern 
+so on the outside. it is a block level element
+but on the inside it behaves according to the flexbox rules 
+
+so lets give the container some height so we can play with the items vertically
+then we can easily change the align-items property to center 
+to center align the items
+
+it was not always this easy in the past but flex all we have to do is set these 4 properties:
+    - display: (flex)
+    - flex-direction
+    - justify-content
+    - align-items
+
+##align-content
+now what about this property
+
+this property only works if we have multiple lines in the flex container 
+
+###flex-wrap
+so currently we have a single line 
+so we are going to add a couple of more boxes 
+if we look closely we can see that the boxes got smaller 
+this is the default behavior of a flexbox container
+
+these items get smaller so they can fit one line 
+we can change this using the flex-wrap property
+the default for this property is nowrap so we need to set it to 
+wrap items will keep their original size 
+and will move them to a new line 
+
+**Now it is time to use align-content 
+now take a look at the boxes in container3
+the items are not quite in the center of the vertical axis 
+now that we have multiple lines its 
+more towards the top and the bottom
+
+now we use align-content with this property
+we can align multiple lines or content as a whole 
+so we can put the entire content in the center 
+
+##Align-self property
+now what if we wanted to move one box to the top 
+this is where we use the align-self property
+
+so we are going to give the box we want to single out a extra class
+so this property is one we apply to a flex itme 
+and not the container 
+
+using this we can override the item we set earlier using the align-items property
+now we see that the box went to the top
+
+##Sizing items
+here are a few properties we need to remember 
+    - flex-basis
+        Used for setting the intial size of a flex item
+   
+    - flex-grow
+       setting the growth factor
+    
+    - flex-shrink
+        setting the shrink factor
+
+    - flex
+        a shorthand that combined all 3 properties
+
+***IMPORTANT***
+all of these properties need to be applied to flex items 
+NOT FLEX CONTAINERS
+
+###flex-basis
+in the box rule we can use flex-basis property
+to set the intial sizes of our boxes
+by default this is set to auto this means the browser is going to look at the width property
+nothing is going to happen with auto
+but if we change it to 10rem it is going ti overide the 
+width because we have the direction  set to width
+if we set it to column it will affect the height
+
+we can apply this property to a indiviual item as well
+we are going to set it back to 5rem 
+
+###flex-grow
+this determines the growth factor of our flex items 
+currently each item is 5rems and we have a lot of space to play with 
+with this property we can allow the items to grow and take up more space 
+
+by default this is set to 0 this is why it is not growing
+but if we set it to one and it is going to grow
+
+now we can also apply this to one indiviual item
+so lets set this to 2 now we can see that this item is not twice as big as the 
+other items  here is why 
+
+**Important**
+this is a common misconception with flex-grow
+just because this one item is set to 2 doesn't mean it is going to
+be twice as wide as the others 
+
+[explanation:]
+so we commented out the flex growths
+we can see that we have plenty of space 
+when we set the flexgrowth property
+
+the browser is going to look at 
+the growth factor of each of the boxes 
+for the first box it was 2 and the other 2 it is going to be 1
+so 2+1+1 = 4
+
+the browser is going to take up the entire available space and divide it 
+by 4 slices and Allocate 2 slices to the first box and the other to the other boxes 
+this is how this algorithm works 
+
+##flex-shrink 
+this is the opposite of flex grow this tells the browser how these elements should shrink 
+if there is not enough space in the container
+
+so if we give this property a value and resize the window we can see that thwy shrink at the same rate
+
+##flex property
+this is a shorthand for all of the previos propertoes 
+we just looked at 
+    - flex-basis
+    - flex-grow
+    - flex-shrink
+
+if we supply a single value it is going to be supplied for the 
+flex-grow property
+
+if we supply 2 values
+the second can either be shrink or basis
+also notice that shrink and grow only take a number not a unit 
+
+if we supply 3
+it is going to be:
+    - grow
+    - shrink
+    - basis
+

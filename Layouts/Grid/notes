@@ -1,0 +1,237 @@
+This is the notes for Grid
+
+So we saw that flexbox makes it easier for us 
+to lay out content in a row or a column.
+
+but there are going to be times where we need to layout 
+content in both rows and columns 
+this is where we would use grids
+
+##grids
+laying out content in both rows and columns 
+a common application for creating grids is in photo galleries 
+
+another example is the layout for most websites 
+
+##defining a grid
+lets see how we define a grid 
+
+to define a grid we are going to need a container first 
+in the container we are going to set the display property to grid
+then we are going to use these 2 properties
+    - grid-template-rows
+    - grid-template-columns
+to define the number and size of rows and columns 
+
+do all together this:
+    - display: Grid
+    - grid-template-rows
+    - grid-template-columns
+
+##getting started
+so we are going to make a div with the class of container 
+then define some styles 
+
+so we make a rule and set display to grid
+now lets attempt to have a grid set up of 3 x 2
+
+##grid-template-rows & grid-template-columns
+this property will set the size and number of rows/columns 
+
+so since we want 3 rows we are going to set the size of the rows to be 100px tall for each row
+then for 2 column we do the same 
+
+now if we look inside of the browser and open up devtools 
+in the DOM we can see that our container has a grid badge 
+if we do not see this we are using a older version of devtools 
+
+if we click the grid badge we can toggle the grid display 
+now in the devtools if we click layout tab
+in this tab we can set the options for this grid 
+
+we can show the number of lines, track sizes (size of grid),
+and at the bottom we can see all of the grids we have on the page 
+this is useful if we have multiple grids and we can change the colors if we need to 
+
+##repeat function
+so remember we do not want duplication in the code 
+so we decided we want to change the size of the columns
+there are 2 places that need to be modified 
+
+a better approach is to use the repeat function 
+so for the value of the column or row call this function 
+and insert the number and the size of the column/rows
+this gives us a single place to modify the code if we need to 
+
+##grid-template 
+this is a shorthand property for grid-template-rows & grid-template-columns
+
+the first agrument is for the row
+we then seperate with a '/'
+next is the column 
+
+now we are going to add items to the grid 
+for this demo we are going to use some boxes 
+with some styling 
+
+As we can see the items are automatically placed
+from top left to bottom right 
+but we also have full control over the placement of these items 
+this is incredibly powerful especially on mobile 
+
+##alignment 
+so if we turn the grid overlay on notice that the 
+each grid item is aligned to the top left corner 
+of the containing cell 
+
+we can easily align these items along the horizontal or vertical axis 
+we have 2 properties we need to remember:
+    - justify-items
+        * align along the horizontal axis 
+    
+    - align-items 
+        * align along the vertical axis 
+
+these are similar to the ones that we used in flexbox 
+in grids we also have justify-content we will look into that later 
+but those 2 properties are the ones we are going to use the most 
+
+so back in the container we are going to align the grid items 
+along the horizontal axis 
+
+do using justify items we are going to set it to center 
+now the items are aligned in the center on the horizontal axis 
+now ew are going to work on the vertical axis 
+
+##aligning grid 
+if we look at the grid we can see that it is aligned to the left side of the container
+we have 2 properties to deal with this 
+    - justify-content
+        * aligns along the horizontal axis
+
+    - align-content 
+        * aligns along the vertical axis
+
+if we do not set the height of the container
+align-content will appear to be doing nothing.
+this is because the container Stretches enough to cover all of the content 
+
+**remembering the properties 
+anything with content represents the grid itself
+
+if we see items this represents the items within the grid 
+
+**Important 
+we need to remember that the default value for justify-items 
+and align-items is 'stretch'
+
+nothing is happening at the moment with this value because we 
+explicitly set the width and height in the box rule 
+
+if we remove the width  the item is going to stretch to fill its entire cell
+the same will happen for height 
+
+**making edits
+remove the width and height from box so the items can stretch
+so we are going to remove the absolute value that we have in the repeat functions 
+we are setting the first column to take 30% of the space 
+and second column to take 70%
+
+now working with % can be a little tricky because we if happen to add a absolute value to 
+the columns then our items is going to go outside of the grid
+this is because % is based on the width of the container 
+
+so what we are going to need here is a percentage of the free space 
+
+so since we are taking 100px we want 30% of whats left of the free space not 
+30% of the container 
+
+##fr unit (fraction)
+this is where the fr unit comes in 
+this will take a fraction of the availiable space 
+
+so as a best practice we should use fr instead over %
+
+* Now lets go back and make changes to the rows 
+the first row is going to be 100px
+the second row which is going to store the sidebar and the main content to be set to auto
+so it can grow and fill the entire space 
+
+for the footer we can use 100px as well
+now if we resize the window the second column will 
+change in size while the other 2 will stay the same 
+
+##applying gaps between rows and colums 
+for this we have 3 properties:
+    - row-gap
+    - column-gap
+    - gap (shorthand)
+
+##placing items 
+now we are going to be looking into placing items in a grid
+for this we have 3 properties:
+    - grid-row
+    - grid-column
+    - grid-area (shorthand)
+
+by setting these properties on a item 
+we can control where exactly that item should be placed 
+
+so for example lets say we want to let the first item 
+take up the entire first row 
+so first we are going to add another class to the first item
+
+##grid-column
+next we are going to add the grid-column property and add 2
+now the first item is going to go to the second column
+and we have a empty space where it use to be 
+
+the other items are automatically placed from top left to bottom right
+so we are going to move the first item back
+
+now if we turn on the line numbers we are going to want to have the first item start from line 1 to line 3
+now by default an item only takes one cell 
+of we want it to take more than one cell 
+we add a '/' and type the end line number so in this casee it is 3 
+
+we can also go backwards -1 = the last column 
+we can aslo use span and how many cells it will takes
+
+##grid-row 
+we can use this to move which row the item is in 
+we can also have it start from one row and end in another 
+
+##grid-area
+this has a weird syntax so we have to pay attention to this 
+so we have to type for numbers 
+    - start/end
+    - each part contains a row and a column
+
+## placing named areas
+another way of placing items is by defining 
+specific areas in the grid and then placing the items in those areas
+
+for this we have 2 properties:
+    - grid-template-areas
+        * this is used to define the areas on the container
+
+    - grid-area 
+        * for indiviual items we set this property to the area we want it in 
+
+##grid-template-areas
+*this property goes in the container 
+
+for the values we add some quotes ("") this is going to represent the 
+first cell in the quotes we can pass the name of the cells inside and seperate them 
+with a space 
+
+each quote represents a cell
+
+##grid-area 
+now in the grid item we call this property and 
+set the value to one of the names we gave the cells to place the item in that cell
+
+so for this we are going to set div 1 inside of 
+header template area
+notice that we only have to write header once and the item will span across the 
+cell 

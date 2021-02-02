@@ -1,0 +1,51 @@
+body{
+    margin: 10px;
+}
+
+/* this is our mobile first approach */
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.box{
+    background: gold;
+    padding: 1rem;
+}
+
+/* this will target the second occurrence of an element with a class of box */
+.box:nth-of-type(2){
+    background-color: dodgerblue;
+}
+
+/* here we are targeting the size of the viewport */
+/* if the width of the viewport is greater than 600px these rules will be applied  */
+@media screen and (min-width: 600px){
+    .container{
+        flex-direction: row;
+    }
+}
+
+/* if the width of the viewport is greater than 900px these rules will be applied  */
+@media screen and (min-width: 900px){
+    .container{
+        flex-direction: row-reverse;
+    }
+
+    .box{
+        background: orange;
+        color: whitesmoke;
+    }
+}
+
+/* these rules only apply to a printer */
+@media print{
+    body{
+        /* this unit should only be used for printers */
+        font-size: 12pt;
+    }
+
+    .box{
+        padding:0.5cm
+    }
+}

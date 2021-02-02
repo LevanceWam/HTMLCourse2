@@ -1,0 +1,32 @@
+/* this is the universal selector this selects all the elements in the html */
+/* this rule will not apply to pseudo elements */
+/* to make it apply to all elements with pseudos we need to extent this rule  */
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 10px;
+}
+
+/* this box is using the default box-sizing content-box */
+.box::before{
+    content: 'hello';
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: gold;
+    /* the padding and border properties affect the size of the element  */
+    /* padding: 20px;
+    border: 10px solid orange; */
+    /* box-sizing: border-box; */
+    /* margin: 50px; */
+}
+.box2{
+    width: 100px;
+    height: 100px;
+    background-color: gold;
+    display: inline-block;
+}

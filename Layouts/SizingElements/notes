@@ -1,0 +1,107 @@
+this is the notes for SizingElements
+
+first we are going to make a div with the class of box 
+so if we look at the div using devtools we can see the size of the div
+
+## padding and border
+What a lot of people don't understand is that if we add a border or padding to the 
+div then it is going to get bigger 
+so we are going to add padding and a border now
+
+now the box got bigger 
+because by default the width and height properties 
+are applied to the content box any padding or border
+that we apply will increase the size of the visible box
+
+now the actual size of the box is 160px x 160px
+we get this by adding all the vertical values together so the top and bottom of 
+padding and border. then the horizontal values are the same 
+so it is going to be 
+    10 + 20 + 100 + 20 + 10 both ways 
+
+## margin 
+Now what about the margin property?
+the margin property does not impact the size of the box 
+it will move the current box away from other boxes
+
+now if we add a margin we will see that the size of the box still stays the same and 
+the box itsself is moved 
+
+## box-sizing property
+Now we can see calculating the actual size of a element can get a little complex
+this is where the box-sizing property comes in
+
+by default this property is set to content-box this is why we have this weird behavior 
+but if we set it to border-box
+the size that we specficied for the width and the height 
+will be applied to the border box
+
+now if we look in the devtools the box size is 100px x 100px
+if we look at the legend 
+the border is 10px and the padding is 20px
+these values are subtracted from the width of 100px
+this is why the content area is reduce to 40px
+
+now if we remove the padding and the border the box will be 
+100px x 100px
+in this case the content area is 100px by 100px
+
+so by setting the box-sizing property
+calculating the size of an element becomes easier and more 
+predictable 
+
+but there is a problem here 
+we do not want to apply this property to every single 
+html element 
+
+## universal selector
+this is where this selector comes in to help
+
+(*) the asterisk is the universal selector for all elements
+there isn't a lot of use cases for this selector and we shouldn't use it 
+so often this selector can case performance issues 
+
+most of the time we use this element to target every elements
+box-sizing property and setting it to border-box
+this is the most common scenario
+
+### another problem
+this universal selector rule does not apply to pseudo elements 
+if we apply a pseudo-element to the dom the universal rule will not apply to that element 
+
+to solve this problem we need to extend the rules 
+
+##inline-block
+the width and height properties are only applied to block level elements 
+so if we were to change the div into 2 span elements 
+we would not get the same results 
+
+this is because inline elements do not respect the width and height properties 
+now if we wanted to change this. this is where we use the display property
+
+now by their defaults block is set to block and inline is set to inline 
+but we have a 3rd value inline-block
+this is like a combination of inline and block level elements
+just like block elements we can now give these elements a width and a height 
+and just like inline they are not inserted on a new line 
+
+now we are going to have 2 box horizontally next to each other but 
+they will have a dimension
+
+now there is a little space between the spans this is because in our 
+html the spaces between these elements are Condense into 1 space 
+to have then next to each other all we have to do is have the elements in the html next to each other 
+now they are attached 
+
+##Recap
+using the width and height properties we can resize our elements 
+but by default the sizes apply to the content box which can get a little complicated 
+
+by using the box-sizing property we tell browser that the size should be applied to the border box
+
+since we don't want to be manually writting this everywhere we can use 
+the universal selector to target all html elements 
+
+finally
+inline elements do not respect width and height properties
+to be able to set a width and a height for them we have to set their display to inline-block

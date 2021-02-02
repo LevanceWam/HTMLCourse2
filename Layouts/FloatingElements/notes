@@ -1,0 +1,114 @@
+this is the notes for FloatingElements
+
+floating elements is another technique for 
+Positioning elements and creating layouts
+
+so lets say we want to display a tweet.
+we can use the article element to represent this 
+
+inside of this article we are going to have some text 
+and a div with a class of avatar that will represent a image
+
+remember that paragraph elements are block-level elements
+so this is going to show up on a new line 
+
+##Float Property
+now we are going to move the paragraph element next to the 
+div using float Property
+in css in the avatar rule we are going to set the float property to left
+
+this is going to float the avatar element to the left of the container
+all of the other elements will flow around this. we can also float them to the right 
+
+now if we add another paragraph
+with longer text it will flow around the image also
+this is how floats work
+
+now we are going to add a right margin in the avatar to give it a little bit of space
+we could have added it to the paragraph but we already have a rule for avatar so it makes more 
+sense to add it to the avatar rule 
+
+*notes
+    we are using relative units (rem) so if the text size changes 
+    the space and width will also adjust accordingly
+
+Now if we look at the page we can see that the second paragraph element is 
+floating around the div and there are going to be 
+situations where we do not want that to happen 
+
+so how can we fix this?
+
+##clear property
+this is where we would use the clear property
+so we are going ti make a new class called clear
+
+we are going to add the clear property and set its value to left because 
+the div element is floating to the left if it was floating to the 
+right we would set this to the right 
+
+but, there is another value 'both' so if we have elements that are floated to the 
+left or the right this will clear all of those floats
+this is actually more preferred by most people to set this to both
+so we don't have to remember the direction of floats 
+
+so now we set this class to the second element and now it is appearing under the div
+
+###float issues
+there is a problem with floats called parent collapsing 
+which means parent elements don't see floated elements when they collapse
+
+see we are going to add a border to the article and comment out the second paragraph 
+Now we see that the parent element (article) has collapsed now it only contains the 
+paragraph element and not the div
+
+this is because the div is the floated element 
+and by default parent elements do not see floated elements
+they are invisible to them 
+
+so the article increased enough to cover the paragraph elememt
+if we get rid of it, it'll collapse futher 
+
+###solutions 
+1. The first way to solve this problem is to add a empty div with the class of clear to the
+bottom of the container to clear the float
+    - so whenever we use float we have to use clear after
+    or we can run into weird layout issues
+
+    - But there is a problem this div the empty container is not meaning full
+    to search engines or screen readers 
+    this makes our html unsemantic this is a problem 
+
+2. The other way to deal with this is to use sudo elements we can use the before and after sudo elements 
+so we can create a rule targeting the tweet class and adding the sudoelement to it
+    - with this approach we are dynamically adding a div instead of directly adding it to the code 
+
+    - but this isn't ideal for if we have to use this rule in multiple places
+    because then we have to duplicate it 
+
+3. The best way is to take step 2 and make it a general class that can be applied anywhere 
+making it more reusable 
+
+    - a common name for this is called clearfix
+    (do not abbrevate this can cause confusion)
+
+    -now all we have to do is add a second class to the 
+    article and we solve the float issue
+
+4. we can use the overflow property
+    - but depending on the value provided this can cause more issues 
+    such as clipping the content, scrollbars where we dont want them 
+
+    this is not the best way to solve this 
+    this is something some people would call a hack 
+    a dirty solution.
+
+
+**takeaway
+floats are a little difficult to work with 
+we have to deal with parent collapsing, we have to clear floats out 
+this is why we shouldn't use floats to build layouts 
+
+floats where used in the pass when we didnt have flexbox and grid
+so use those too for your layouts 
+
+there are still plenty of sites that use floats so this is why we took a look into them 

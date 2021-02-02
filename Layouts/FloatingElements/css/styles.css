@@ -1,0 +1,28 @@
+body{
+    margin: 10px;
+}
+
+.tweet{
+    border: 3px solid black;
+}
+
+.clearfix::after{
+    /* we are inserting a empty element after the content of this class */
+    /* this element by default is a inline element so we have to change it to block */
+    content:'';
+    display: block;
+    clear: both;
+}
+
+.avatar{
+    width: 5rem;
+    height: 5rem;
+    background-color: gold;
+    /* this is going to float the avatar element to the left of the container */
+    float: left;
+    margin-right: 0.5rem;
+}
+
+.clear{
+    clear: both;
+}
