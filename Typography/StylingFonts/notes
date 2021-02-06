@@ -1,0 +1,94 @@
+This is the notes for StylingFonts
+
+we are going to learn about StylingFonts
+so we are going to use a header and a paragraph element for this example 
+in the stylesheet we are going to define some rules
+
+## font family
+This is the first property we are going to be looking at 
+with this we can change the font of this element 
+
+Generally speaking we have 3 main catergories:
+    - serif
+    - sans serif
+    - Monospace
+
+there are more catergories but those catergories are mostly used in printing
+and they are irrelevant for the web
+
+* What are the differences?
+    ans:
+        - Serif fonts have a small line or stroke at the end of all the characters
+        they are more professional and more serious. 
+        often used in books, newspapers and magazines
+            - georgia and times new roman are an example of this catergory
+
+        - Sans-serif do not have these lines or strokes at the end of characters
+        they are a little more playful and modern 
+        some examples of these are 
+            - avenir
+            - arial
+            - futura
+            - helvectica
+            - roboto
+        
+        - monospace, mono means one so this means one space
+        these fonts are a little different from the fonts in other catergories
+        in the sense that the width of the characters is exactly the same 
+        this is why these fonts are ideal for displaying code 
+            - consolas
+            - courier
+            - unbuntu
+        this is ideal because we want the characters to align in our code 
+
+**tip**
+by pressing ctrl and space vs code will give you suggestions 
+this will pull up the [web safe fonts] that is common on most computers
+
+after that we can pick a [font stack]
+a font stack consist of multiple fonts 
+if the first font is not available on the computer it will go to the next font 
+in the stack
+
+the last font in the stack is a generic font 
+the font that will be used here will vary from computer to computer 
+
+now if we add a anchor element and  we will see that the font is different 
+we want to make the anchor element the same font but we do not want to duplicate the same code 
+
+this is a chance for usre to use inheritance 
+so we can apply the family property to the body element and the rest of the elements will 
+inherit it 
+
+now all the elements on the page are using the same font 
+
+if we want to change the font for a certian heading we can just define a new rule 
+
+## font-weight
+this property controls the boldness of the font 
+we can add values from 100 - 900 to affect the boldness 
+we also have some keywords:
+- bold 
+- bolder 
+- lighter
+- normal
+
+bold translates to 700 if we were using the numeric values 
+normal translates to 400
+
+## font-style
+by default the value for this is normal
+but we can set it to italic or bold 
+
+## font-size 
+this will affect the size of the font 
+we do have keywords but most people like to use numeric values 
+which can be relative or absolute 
+
+## color
+affects the color of the font 
+by default this is set to pure black
+
+generally speaking it is not a good idea to use pure black as 
+the body text color its better to use a really dark grey 
+like #111 or #222 its a little easier on the eyes 
