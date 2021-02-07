@@ -1,0 +1,38 @@
+This is the notes for FontServices
+
+we know embedded fonts now but some of those fonts need to be licensed
+licensing can be pretty expensive 
+this is where web font services help
+
+## web font services
+the most popular is google that gives us access to a bunch of free fonts
+- google web fonts (fonts.google.com)
+***paid***
+- adobe fonts
+- fonts.com
+- fontdeck.com
+
+all of the services above have a subscription model 
+lets learn how to use the google free fonts 
+
+so we go to google fonts and find opensans regular and bold
+
+** one of the limitations of using this service is that 
+we can get rid of some of the characters included in the font 
+subsettings so we can not reduce the size of the font 
+
+to use the font we need to copy the link and paste them inside of the html markup 
+we are going to place them before the stylesheets 
+
+Now what are these?
+ - The first link element is with the relationship of pre-connect this tells the browser 
+ that the page is going to establish a connection with this domain and retrieve content from 
+ there. 
+ * this is a tiny optimatization technique to start the process as soon as possible 
+
+ - the second link element is a reference to a stylesheet 
+ the service (which is google in this case) is providing a stylesheet for us 
+
+ now we can go inside of the css and use the fonts from google 
+
+ 
