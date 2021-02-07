@@ -1,0 +1,41 @@
+/* we have to put the font face at the top so that the browser can register the font so we can use it */
+@font-face {
+    font-family: 'opensans';
+    src: url('fonts/open-sans/opensans-bold-webfont.woff2') format('woff2'),
+         url('fonts/open-sans/opensans-bold-webfont.woff') format('woff');
+         /* we set this to bold because we are referencing the bold version */
+    font-weight: bold;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'opensans';
+    src: url('fonts/open-sans/opensans-regular-webfont.woff2') format('woff2'),
+         url('fonts/open-sans/opensans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    margin: 10px;
+    /* we can use the embedded font now  */
+    font-family:'opensans',Arial, Helvetica, sans-serif ;
+}
+
+h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+p{
+    font-weight:200;
+    font-style: italic;
+    font-size: 1rem;
+    color:#333;
+}
+
