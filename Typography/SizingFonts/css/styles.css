@@ -24,18 +24,27 @@ html{
 
 body{
     margin: 10px;
-    /* using the custom font from google  */
-    font-family:'Open Sans',Arial, Helvetica, sans-serif ;
+    font-family:'Open Sans',Arial, Helvetica, sans-serif;
+    /* 1 x font size of the root element which is html */
+    font-size: 1rem;
 }
 
-h1{
+/* setting the font for all of the headings  */
+h1,h2,h3,h4,h5,h6{
     font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 
-p{
-    font-weight:200;
-    font-style: italic;
-    font-size: 1rem;
-    color:#333;
+h1{   
+    font-size: 4.209rem;
+}
+
+h2{
+    font-size: 3.157rem;
+}
+
+@media screen and (min-width: 400px){
+    html{
+        font-size: 130%;
+    }
 }
 
