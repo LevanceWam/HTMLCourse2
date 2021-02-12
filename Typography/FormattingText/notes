@@ -1,0 +1,61 @@
+this is the notes for FormattingText
+
+in this lecture we are going to take a look at a few properties for formatting text 
+
+##FormattingText
+- text-align
+- text-indent
+- text-decoration
+    * used for adding underlines or line throughs
+- text-transform
+    * convert letters to upper or lower case
+- white-space 
+    * for controlling wrapping 
+- column-properties 
+    * create multi-column text 
+- direction 
+    * which is used in right to left languages 
+
+and plenty more!
+
+##text-align
+this property controls the horizontal alignment of our text 
+the default value is left 
+we should try not to use the justify value this can make the text a little hard to read 
+
+##text-indent
+this is used for adding indentation to the first line of text
+
+quite often we don't want to indent the first line after a heading 
+we want to indent the line of a subsequent paragraph 
+how would we accomplish this?
+
+this is were we would use relational selectors
+look to code 
+
+##text-decoration
+this property is used for adding underlines or line throughs
+we can tset this property to underlines
+or to line throughs (this is good for showing prices that are no longer valid)
+
+##text-transform 
+With this we can convert the text to lowercase or uppercase or captialize
+
+##whitespace 
+this property controls wrapping 
+if we set this to nowrap we wont have any wrapping
+this is not ideal we would want to truncate the text like adding '...' to the end 
+
+##column-count
+In CSS3 we have properties for creating multi column text 
+really easily
+
+so using the column count property
+this will create columns
+
+column gap controls the gap
+column-rule adds a line 
+
+##direction
+this is used in right to left languages
+default is ltr: left to right 

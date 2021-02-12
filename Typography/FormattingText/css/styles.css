@@ -1,0 +1,56 @@
+html{
+    font-size: 62.5%;
+}
+
+body{
+    margin: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2rem;
+    line-height: 1.5;
+  
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    margin:3rem 0 1rem;
+}
+
+p:first-of-type{
+    width: 50ch; 
+    /*  * adds a line through or underline  */
+    text-decoration: line-through;
+    /* * Change the text to lowercase */
+    text-transform: lowercase;
+
+    /* * this is going to give us one line of text */
+    /* ? these are the steps to truncating text */
+    white-space: nowrap;
+    overflow: hidden;
+    /* * this creates the ... at the end of the line */
+    text-overflow:ellipsis;
+
+    /* * add a columns */
+    column-count: 2;
+    /* * control the gaps */
+    column-gap: 2rem;
+    /* * adds a line inbetween columns */
+    column-rule: 3px solid #333;
+
+
+}
+
+/* * this selects a p element that comes after another p element */
+p + p{
+    width: 50ch; 
+    /* * this property controls the horizontal alignment of our text   */
+    text-align: center;
+    /*  * this property adds indentation to the first line of text */
+    text-indent: 1rem;
+
+    /* * changes the direction of the text */
+    direction: rtl;
+}
+
