@@ -1,0 +1,28 @@
+html{
+    font-size: 62.5%;
+}
+
+body{
+    margin: 10px;
+        /* here we have a font stack */
+    /* the browser will check to see if the font is available if not it goes to the next one in the stack */
+    /* the last one in the stack is a generic font the font that is used varies from computer to computer */
+    font-family:Arial, Helvetica, sans-serif ;
+}
+
+h1{
+    /* the font for this element is going to be this  */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+p{
+    /* this affects the boldness of the font */
+    font-weight:200;
+    /* will make the font italic */
+    font-style: italic;
+    /* affects the size of the font */
+    font-size: 1rem;
+
+    color: brown;
+}
+

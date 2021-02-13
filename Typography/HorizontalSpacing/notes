@@ -1,0 +1,44 @@
+This is the notes for HorizontalSpacing
+
+now we are going to look into HorizontalSpacing
+
+##HorizontalSpacing
+in this lesson we are going to talk about 3 properties 
+    - letter-spacing
+    - word-spacing
+    - width 
+
+in the rule for the body element we are going to 
+use the letter-spacing property
+
+##letter-spacing 
+this property allows us to control the space between letters in a text
+when using this property we do not want to use rems 
+this is because this is going to give us a lot of space 
+
+it would be better to use px here 
+
+we use this property if the font makes the text to close to each other and we 
+want to give our text a little more space 
+the same can be applied of the letters are too far
+
+##word-spacing 
+this property helps us specify the spacing between words 
+
+We are going to comment out the 2 properties that we just used 
+so we can look at the ideal line length
+
+##Ideal line-length
+now we are going to talk about how many characters should we have in each line 
+so the user can easily read our text 
+
+research shows that:
+    - should be between 50 - 70 characters
+
+so how can we achieve this?
+there is a trick for this 
+so we need to define a rule for paragraph 
+we are going to set the width of this element to 50ch 
+ch is another unit in css which is relative to the width 
+of the 0 characters so this 50ch is equalivent to 50 0's
+

@@ -1,0 +1,74 @@
+This is the notes for EmbeddingWebFonts
+
+so we briefly went over web safe FontServices
+in the last lecture 
+remember that these fonts are pretty much are on each computer 
+out there
+
+but these can be a little boring 
+there are plenty of sites that we can use many fonts 
+
+like:
+    - fontsquirrel.com
+    - fonts.com
+    - myfonts.com
+
+some are free and some need to be paided for so we might 
+need a license 
+
+generally speaking the paid ones look better at different sizes 
+they look very sharp, very clear so 
+so if we are working on a serious project we might want to 
+to use a paid font 
+
+## Open Sans
+this is a popular and free font 
+on fontsquirrel.com lets look up open sans 
+and download the ttf file 
+
+font files come in a variety of different formats 
+- ttf
+- otf
+- eot
+- woff
+- woff 2.0
+
+for web we use woff and woff 2.0 
+because these formats are more compressed and more efficient for web 
+when embedding the fonts for webpages we 
+want to make sure that the fonts are really small 
+so that they can be downloaded as soon as possible 
+
+so now that we downloaded open sans we are going to convert it to a woff file 
+this is because ttf files are pretty big 
+
+back on fontsquirrel we need ton click on generator 
+here we can upload a font and convert to a different format 
+here we are going to choose optimal 
+in the future we will need to look into editting these ourselves
+
+now we need to open the folder that ws downloaded and we can see the new fonts 
+some browsers support woff and some of the more modern browsers use woff2
+we can find out which browsers use it at 
+[caniuse.com]
+
+now we are going to add these fonts into the project
+in the css folder add a new file called fonts and insert them in there 
+
+back in the folder we got the files from  
+we were also provided with a css
+that has a font face rule 
+
+this tells the browser where to find the custom font files 
+we are going to copy these rules and paste them at the top of our css 
+
+these need to be at the top because we need to register the fonts first before we can use them 
+then we needed to make some small changes
+
+1. first update the urls to find the fonts in the correct folder 
+2. in font-face we are going to change the name of the family name 
+    to make it easier and readable
+3. for the bold version we are going to set the weight to bold since we are referencing the bold version 
+
+Now we can use the fonts anywhere in the code so we are going to add 
+'opensans' to the font-family property in the body rule 

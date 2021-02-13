@@ -1,0 +1,49 @@
+This is the notes for VerticalSpacing
+
+now we are going to be looking at styling text 
+for this lecture we are going to be looking at vertical spacing 
+or the vertical rhythm of our text
+
+##VerticalSpacing
+there are 2 properties for vertical spacing 
+    - margin 
+    - line-height 
+
+so now we are going to duplicate what we have in the body
+by doing this we are violating the law of proximity
+
+##law of proximity
+this describes how we see connections between various objects 
+so objects that are close to each other are precieved to be related
+
+so if we take a look at the margin between the 1st paragraph and the second heading 
+it is not clear that this heading is for the paragraph below 
+this is where the law of proximity needs to be applied 
+
+so we are going to want to decrease the margin on the bottom and increase the 
+one on the top of the 2nd heading 
+
+now we can see the difference this made to the page 
+this is a application of the law of proximity
+
+as a rule of thumb we the top margin need to be higher than the bottom argin 
+and the reason we are using rem here is becasue we want the margin to be relative to the 
+font size of the root element 
+so if the default font size is changed the margins are still respected 
+
+##line-height
+this is the next property we are going to talk about 
+in the body element we are going to specify the line height 
+
+with this property we can adjust the vertical space between lines 
+so we can bring the lines closer or farther 
+a general rule of thumb is to set this to one and a half times the font-size 
+
+now there is a problem with this approach
+so if we change the font size the lines are closeer 
+so we have to remember to change the line height if we change the font 
+
+Here is a trick 
+if we remove the unit the value set for the line-height property will be used as a multipler 
+so the browser will multiply this value by the fontsize
+this will keep our font size looking good

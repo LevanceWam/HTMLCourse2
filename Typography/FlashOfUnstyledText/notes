@@ -1,0 +1,61 @@
+this is the notes for FlashOfUnstyledText
+
+One of the problems with custom text is that the user can ecounter what we call a flash of unstyled text
+which basically means while the browser is downloading the font 
+it is going to be using a fallback font and appear unstyled 
+
+we can simulate this in the network section in devtools 
+by disabling the cache and setting the online setting to slow 3g
+
+now if we reload the page we can see the second font we have in the font stack
+appear and after some time the opensans loads
+this is what we call  FlashOfUnstyledText (FOUT)
+
+## flash of unstyled text (fout)
+during the short peroid of time the text will appear on the site 
+now the problem is sometimes when working with more complex pages 
+when the new font is applied we might get some layout shifts 
+this can move some elements around the page and this can give the user a bad experience 
+
+there is sadly no way around this but there are some techniques to minimize this 
+problem but we can not completely aviod this 
+this is because we are using a custom font that need to be download on the users computer 
+
+back in the stylesheet we can use the font-display property
+to tell the browser how to handle this scenario 
+
+## font display
+by default the value is auto and the browser decides what should be done 
+unforunately this behavior is different from one browser to another 
+
+so current chrome uses a fallback font then swaps it with the custom font when availiable 
+other browsers have different approaches some will hide the text while the text is being downloaded
+this is wwhat we call a flash of invisible text 
+
+##swap value 
+so we do not want to use auto we want to have a 
+explicit control over the behavior 
+so we can set it swap so the browser will use a fallback font and then swap when the custom one is availiable
+
+there is still a problem with this 
+if th browser takes a while like 10 secs 
+the swap will happen and it might cause a layout shift
+
+## fallback value 
+a better approach would be to use fallback value
+here we are telling the browser to use a fallback font 
+this will give the browser a short window to download the font 
+if it doesn't make it it will not swap 
+
+##block value 
+this is something we do not need to use 
+this is going to hide the text and wait for the text to download
+but if the text doesn't download then the text will never be visible 
+
+##optional value 
+with optional we are telling the browser to 
+this font is optional and nice to have its not critical
+we are giving the browser a small window to download this 
+
+behind the scenes it will store it in the cache and inbetween page loads the browser is going to 
+try to take the font and use it on the page so we do not notice the layout shift 

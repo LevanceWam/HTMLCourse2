@@ -1,0 +1,31 @@
+this is the notes for SystemFontStack
+
+##SystemFontStack
+this is another concept that we need to know about 
+with this stack we can tell the browser 
+to use the default font of the operating system on the users  computer 
+here are some benefits of using this:
+    - can boost performance (saves us time from downloading fonts)
+    - no (FOUT) 
+    - native look (look familiar to the user)
+    - overall better experience 
+
+but there are problems with this approach
+    - default fonts vary 
+        (different os different default fonts)
+
+so when we use the system font stack the font will look different 
+from one computer to another 
+
+*Question:
+    How are system fonts different from wed safe fonts
+    ans:
+        - web safe fonts are the basic elementary fonts 
+        that have been around for almost 20 years and are available on every computer 
+        they are kind of boring 
+        - system fonts are more modern fonts that are used by todays 
+        os' so they look much better 
+
+    so to do this in your css all you have to do in vscode 
+    is type -apple and this will generate the default fonts for 
+    all of the operating systems 
