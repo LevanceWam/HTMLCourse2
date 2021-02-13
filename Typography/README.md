@@ -11,3 +11,5 @@ This section will include:
 - Formatting text
 
 All of these are **super important** because 90% of the information on the web is text and we want to make sure the the text is easy to read on various screen sizes.
+
+## Fonts
