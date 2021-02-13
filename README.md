@@ -19,7 +19,7 @@ This is all important stuff.
 ## Table of Contents
 
 - [Layouts](https://github.com/LevanceWam/HTMLCourse2/tree/main/Layouts)
-- [Typography]()
+- [Typography](https://github.com/LevanceWam/HTMLCourse2/tree/main/Typography)
 - [Images]()
 - [Forms]()
 - [Transformations]()
