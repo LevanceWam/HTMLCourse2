@@ -1,1 +1,39 @@
 This is the notes for ContentImages
+
+in html we have 2 kinds of images 
+    - content images 
+    - BackgroundImages
+
+lets take a look at content images in this lecture 
+
+## Img element
+in previous lectures we took a look at the image element 
+make sure to go back and look over the basic
+    - what the attributes are used for
+
+there are times we are going to just have images just for 
+decoration and in this case we can have the alt attribute blank 
+this is because the screen readers will read out the name of the file 
+if the alt attribute is not there 
+
+we do not want the screen reader to do this 
+so as a best pratice leave the alt attribute blank 
+
+now using the meal image if we look in the browser 
+we have a 400 x 400 px image 
+
+this is the real size of the image 
+
+## scaling images 
+we can always use css to scale a image 
+
+as an example we are going to sett the img width to 100% of the viewport
+this makes our image look blurry 
+we loss some of the details because the image was originally 
+400 x 400 px but since we are showing it at a much bigger size and we don't have
+enough px or dat about those details 
+this is why it looks blurry this is the problem with raster images 
+
+SVG files do not have this problem
+but we can not show this meal using mathematics is really complex 
+in reality this is never going to be possible 
