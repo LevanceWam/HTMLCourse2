@@ -3,27 +3,8 @@ html{
 }
 
 body{
-  /* ! the body element is a block level element so its height is 0 by default */
-  height: 300vh;
-
-  /* * using the url function we are adding a background image to the body */
-  /* background: url(../images/bg-paper.jpg); */
-  /* background: url(../images/bg-paper@2x.jpg); */
-  background: url(../images/bg-sanfrancisco.jpg);
-
-  /* * this disables the vertical and horizontal repetitons */
-  /* * or changes the direction of the repetition */
-  background-repeat: no-repeat;
-
-  /* * changing the position of the background image */
-  background-position: 100% 100px;
-
-  /* * changing the size of the image  */
-  /* * we can either use 2 values or a keyword */
-  background-size: cover;
-
-  /* * this will keep the image relative to the view port and the content will move */
-  background-attachment: fixed;
+  
 }
 
 
+img
