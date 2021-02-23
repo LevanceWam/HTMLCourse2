@@ -1,3 +1,73 @@
 This is the notes for CSSSprites
 
-one more time
+We are going to look at a optimization technique called 
+CSS Sprites
+
+so we are going to use somes image that we got from 
+https://www.flaticon.com/
+
+now if we use the devtools and look on the network tab and disable the cache 
+when we refresh the page we want to make sure the images are redownloaded
+
+notice that to get the images the browser has to send seperate http request to the browser 
+now if the page has a million images and we have a million users
+all of the users are going to send millions of request to the server 
+this is going to cost a lot of overhead on the server 
+
+this is where the CSSSprites technique comes in
+
+##CSSSprites technique
+
+this allows us to combine all of the images into a single image
+then we get that image using a single http request
+
+First thing we need to do is to go to this website:
+http://cssspritestool.com/
+
+this site makes it easy for us to combine multiple images 
+there are plenty sites that can do this as a one off but
+it would be better to use the command line if we need to make multiple sprites 
+because with the command line we can automate the process
+this is beyond the scope of this lecture 
+
+back to http://cssspritestool.com/ 
+we are going to add the images we are going to use in this lecture 
+then we have some setting that we can set for this lecture everything will remain the same 
+except that the css class prefix will be 'bg-'
+
+now all we need to do is download the zip and 
+open it
+
+in this file we are going to find the images that combine together and some other things
+there is a css file that is include and we are going to check that out 
+
+this file has a bunch of generated classes and they all start with 'bg-'
+after the bg- there is a name of one of the images that was combined 
+
+looking at the properties we can see that there is a Background property that has the 
+url value of our combine image
+after that we have 2 value for the Background position
+
+so we are going to copy the rules from the css into our css and 
+in the html we are going to add on of the classes to a span element 
+
+now if we take a look at the rule again we can see that we set the width, height, and changed the 
+displat to inline-block 
+
+**Remember**
+inline element can not have width and heights applied to them 
+unless we change the display to inline-block 
+
+now we can add the other images to the page 
+now the cool thing about this is that now the browser is only making one http request
+
+##problem 
+we need to be careful when using this technique
+we shouldn't try to add all the images  we have into a css sprite 
+because: 
+
+    - File size can get too large
+    - sprites are not flexible 
+        ** if we wanted to replace one of these images we have 
+        to regenerate the css sprite so we should use this approach
+        for small logos and icons 
