@@ -1,0 +1,34 @@
+This is the notes for DataUrls
+
+time to take a look at data urls 
+formerly called data URI's
+this is another optimization technique to reduce the number of http request 
+
+with this technique we can embed a image directly into a html 
+document or a stylesheet
+
+so for this lecture we need to go to https://cssportal.com/image-to-data/
+if the site goes down just do a simple google search
+
+so we can drop an image in the box
+then in the data uri box we get a sequence of characters and 
+we can insert this into a html doc or a stylesheet
+
+this url starts with data
+this is another url protocol like https and http 
+this is used for representing a binary file in a sequence of characters
+
+now if we open the browser we are going tose the image 
+then we can look in devtools and in the network tab
+we are getting s data url this data url is coming from the memory 
+because it is embedded in the document 
+
+##problems 
+1. size of the embedded code > size of the resource 
+    *the embedded code will always be larger than the original 
+    we do not want to embed so many images using DataUrls because we will end up increasing the size of the html doc 
+    or stylesheet
+
+2. increased complexity added to the markup and workflow 
+
+3. slow on mobile 
