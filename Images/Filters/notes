@@ -1,0 +1,30 @@
+this is the notes for Filters
+
+In css we can also apply filters to our images 
+some of these filters include:
+    - grayscale
+    - blur 
+    - contrast
+    - brightness
+    - saturate 
+    - and more 
+
+staeting with grayscale we have a css function for this 
+we can add a value here
+
+we can also apply multiple filters here 
+so now we are going to add blur 
+
+#Question:
+    what if we wanted to add these filters after we hover over the image 
+    ans:
+        remember psuedo class selectors?
+        with this we can choose a element with a particular class or particular state 
+
+so we are going to add the hover psuedo class selector 
+
+## Complete list of filters 
+https://developer.mozilla.org/en-US/docs/Web/CSS/filter
+
+**Remember to check caniuse.com to see what properties can be used 
+filter is not compatible with ie and opera mini at the moment 
