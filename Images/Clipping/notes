@@ -1,0 +1,12 @@
+This is the notes for Clipping
+
+not we are going to take a look at clipping 
+
+in CSS we can easily clip or cut a part of an image 
+so in google search for css clip generator 
+and go to this website https://bennettfeely.com/clippy/
+
+with this website we are given templates to clip our images into different shapes 
+so all we need to do is to copy the css property on the page 
+and apply it to a rule 
+
