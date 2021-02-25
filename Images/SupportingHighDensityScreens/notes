@@ -1,0 +1,79 @@
+This is the notes for SupportingHighDensityScreens
+
+these days we have a lot of high density screens with more pixels 
+and this is something that we need to take into account when we display images 
+
+over the years we've had different models of iphones with similiar screen sizes but 
+double the pixels/resolution
+
+with the iphone 4 this was the first generation called retina display
+so if we have a image that is 320 x 320
+on a iphone 3 it will fit
+on the iphone 4 has a scale factor of 2x which means its going to render each 
+pixel of the image using 2 pixels on the device 
+so its going to resize the image and make it twice as big
+
+Here's the problem with that 
+remember when we scale up a raster image the image can look a little bit blurry 
+if we want to make the image look a nicer on high density screens we are
+going to have to provide a seperate version of 
+of the image that is twice as big as the original
+we will look into this in a little bit 
+
+##terms 
+here are some terms we need to look into:
+our devices these days have a few properties 
+    - Physical resolution
+        * this is based on the actual number of pixels on the device 
+   
+    - Logical resolution
+        * this is how they behave basically
+
+        so iphone 4 has a Logical resolution of 480 x 320
+        css is always based on the Logical resolution
+        so when we say 200px in css we are talking about Logical resolution
+
+    - Device pixel ratio (DPR)
+        * this is the ratio of physical to Logical pixels 
+        different screens have different DPRs
+        sometimes it can be 1 and a half it can be 2 or 2 and a half 
+        and so on 
+
+    - high density
+        * this is essentially a screen with a DPR greater than one 
+        which means we have more physical px than logical px
+
+now we are going to go into photoshop and learn how to make these images bigger 
+if we do not have photoshop we can use something else but the 
+folder of images we have include the larger images 
+
+notice the 2x and 3x at the end of the file name 
+this is the proper naming convention 
+
+##In photoshop or similar tools 
+click on the image tab and hit image size 
+
+next we are going to set the image width to 1200 and the height to the same thing 
+so for screens this is 3x the size of 400px screens 
+
+then we need to go and save the image 
+we are going to save it as a jpg and we get a dialog box 
+to let us compress the image 
+as a rule of thumb for jpg is 7 becasue we get a good quality and compression
+then we do the dame for 2x screens so it is going to be 800
+
+**note**
+it is best to start with the biggest image  in this case 3x 
+because if we go the other way around we are going to get a blurry image 
+because PS has to create new pixels 
+
+
+##srcset
+to provide different versions of the same image for high density screens 
+we're going to use the source set attribute
+
+this attribute we can provide a set of sources for different 
+screens 
+
+we should not try to use this image everywhere the best place to do this is on a homepage with images that need to be super sharp
+this technique is also for fixed sized images 
