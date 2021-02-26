@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Using Modern image Formats</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- * these 2 formats are really similar but jpg might be a little sharper -->
+    <img src="images/meal.webp" alt="">
+    <img src="images/meal.jpg" alt="">
+
+    <!-- * using the picture element -->
+    <!-- * if the browser doesn't support webp it will go to jpg -->
+    <picture>
+        <source type="image/webp" srcset="images/meal.webp">
+        <source type="image/jpg" srcset="images/meal.jpg">
+        <!-- ! just in case the browser doesn't support picture element -->
+        <img src="images/meal.jpg" alt="A bowl of salmon and curry">
+    </picture>
+</body>
+
+</html>

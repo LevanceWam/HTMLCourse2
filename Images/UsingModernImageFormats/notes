@@ -1,0 +1,32 @@
+this is the notes for UsingModernImageFormats
+
+earlier in the section we took a look at the common raster image formats 
+we are going to take a look at how to use these modern image formats 
+for this lesson we are going to use webp
+
+##converting to webp
+to convert to webp here are some options:
+    - photoshop (webpshop plug-in)
+    - sketch 
+    - online tools (https://cloudconvert.com/)
+    - command-line tools 
+
+we are going to use https://cloudconvert.com/
+we upload an image and select the format that we want to use
+remember that webp is a lot smaller than jpg
+
+##using webp
+there are 2 ways to use this image
+
+    1. we can use the image element 
+    but the problem with this is internet explorer does not support webp
+
+    2.we can use the picture element 
+    this is so we can use webp
+
+##picture element 
+each picture can have multiple sources 
+
+if the browser doesn't support webp it will go to jpg
+
+we should always include a img element just incase the browser does not support the picture element 
