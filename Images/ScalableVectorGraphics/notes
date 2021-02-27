@@ -1,0 +1,21 @@
+This is the notes for ScalableVectorGraphics
+
+Lets take a look into ScalableVectorGraphics
+these graphics are defined by mathematical vectors
+like lines, curves and etc 
+
+they are not tied to pixels and look sharp at any size
+we can change the size and they will still come out looking nice 
+
+we use svg files for logos icons and simple graphics 
+another application is in backgrounds 
+
+##svg backgrounds
+so if we head to https://www.svgbackgrounds.com/
+
+we can find plenty of backgrounds and preview them 
+they all look really sharp because they are defined by math and not pixels 
+
+so lets try this using a file that wwe have 
+
+svg files are really powerful and really small
