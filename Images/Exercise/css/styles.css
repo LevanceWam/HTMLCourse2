@@ -1,0 +1,85 @@
+html{
+    font-size: 62.5%;
+}
+
+/* * this is going to be the styling for mobile */
+
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: ghostwhite;
+
+}
+
+.hero{
+     /* ! Note do not mess with the height of the container to get the image to fix this will cause it to look blurry */
+    /* * by using the cover value this helped the image take up the entire page.  */
+    background: url("../images/jeremy-thomas-E0AHdsENmDg-unsplash_ik7fyj_c_scale\,w_320.jpg") no-repeat;
+    background-size: cover;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* * aligning the items on the x axis (vertically because we are using flex-direction column) */
+    justify-content: center;
+    padding: 2rem;
+    align-items: center;
+}
+
+h1{
+    /* * the font weight was already defined in the google font link we have */
+    font-size: 5rem;
+    text-shadow: 3px 3px #111;
+    text-transform: uppercase;
+    word-spacing: 1.5rem;
+    font-weight: 900;
+}
+
+.tagline{
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    padding: 1.5rem;
+}
+
+/* * view for tablet breakpoint 853 */
+
+@media screen and (min-width: 768px){
+    .hero{
+        background: url("../images/jeremy-thomas-E0AHdsENmDg-unsplash_ik7fyj_c_scale\,w_816.jpg") no-repeat;
+        background-size: cover;
+    }
+
+    .hero .tagline{
+        font-size: 3rem;
+    }
+
+}
+
+/* * view for tablet breakpoint 1024 */
+
+@media screen and (min-width: 1024px){
+    .hero{
+        background: url("../images/jeremy-thomas-E0AHdsENmDg-unsplash_ik7fyj_c_scale\,w_1327.jpg") no-repeat;
+        background-size: cover;
+    }
+
+    h1{
+        font-size: 6rem;
+    }
+
+}
+/* * view for laptop breakpoint 1440 */
+
+@media screen and (min-width: 1440px){
+    .hero{
+        background: url("../images/jeremy-thomas-E0AHdsENmDg-unsplash_ik7fyj_c_scale\,w_1440.jpg") no-repeat;
+        background-size: cover;
+    }
+
+    h1{
+        font-size: 9rem;
+    }
+
+}
