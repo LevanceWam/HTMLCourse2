@@ -12,7 +12,6 @@ body{
 }
 
 .hero{
-     /* ! Note do not mess with the height of the container to get the image to fix this will cause it to look blurry */
     /* * by using the cover value this helped the image take up the entire page.  */
     background: url("../images/jeremy-thomas-E0AHdsENmDg-unsplash_ik7fyj_c_scale\,w_320.jpg") no-repeat;
     background-size: cover;
@@ -22,8 +21,10 @@ body{
     flex-direction: column;
     /* * aligning the items on the x axis (vertically because we are using flex-direction column) */
     justify-content: center;
-    padding: 2rem;
+    /* * aligning the items on the y axis (horizontally because we are using flex-direction column) */
+    /* * this affects the width of the items  */
     align-items: center;
+    padding: 2rem;
 }
 
 h1{
@@ -65,6 +66,7 @@ h1{
         background-size: cover;
     }
 
+    /* * have to resize the h1 as the screen gets bigger to keep it looking nice */
     h1{
         font-size: 6rem;
     }
