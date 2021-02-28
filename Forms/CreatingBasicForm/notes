@@ -1,0 +1,45 @@
+This is the notes for CreatingBasicForm
+
+We are going to be looking into creating a form
+we start off by using the form element 
+
+## Form element 
+every form should have an action attribute this is used for submitting the form
+we are going to get rid of it for now
+
+inside the form element we are going to have 1 or more input fields
+also known as form controls 
+
+## input 
+each input element has a type 
+so we can set it to text, radio and so on
+
+Each input needs a Label 
+some people would use a paragraph element but there is a better element for this 
+
+##label element 
+this element is what we use to label a input and this is a inline element 
+so it will appear next to the input horizontally 
+
+all label element have a for attribute with this attribute we can associate this label with it a input field 
+so the input field would need a unqiue identifer  and then we use the value for the for in label 
+once we do this if we click on the label the input associated with the label will focus 
+
+labels makes our forms more accessible or more users
+
+##Email type 
+another input type is email, this comes with some basic validation so if 
+the value is not a email then it will return a error 
+
+##layout
+if we want to change the form layout to vertical 
+then we need to put it in a container like a div, ul, or p element 
+this will have it looking vertical 
+
+##button
+now we are going to add a submit button 
+we add a button element, this element has a type 
+
+if we set it to submit  then it will be used for submitting the form 
+
+reset will clear all of the values in the form
