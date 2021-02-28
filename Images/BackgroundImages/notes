@@ -1,0 +1,60 @@
+This is the notes for BackgroundImages
+
+we often use background images for decorative purposes 
+we can apply a background to the body or a section and so on 
+
+lets try to make a rule for the body and give it a background image
+
+##backgroundImage 
+using the background/background-image property we can add a url function to add the background image 
+now we can see that the image is repeated this is ugly
+
+##background-repeat 
+using this property we can disable the horizontal and vertical repetitions 
+or we can set it to repeat along the horizontal or vertical axis
+
+##background-position
+by default the image is moved into the top left corner of the element 
+but we have full control on where this image can be using this property
+
+this property takes 2 values one for the horizontal and the vertical
+postive to the right and down 
+negative for left and up
+these values depend on the image 
+
+we can also use relative units by using 100% the image will go all the way to the right of the container 
+
+##background-size
+this property allows us to change the size of the image 
+again we need to enter in 2 values 
+for the width and the height 
+
+we can also use relative units here 
+don't forget that since the body element is a block-level element 
+the height is 0 by default it will get tall enough to cover its content 
+
+###cover value 
+
+we can aslo use the value cover for the background-size property
+this resizes the background so it covers the entire container while keeping its aspect ratio
+so in this case it covers the entire page 
+
+if we pay close attention the background image looks a little blurry 
+because the image is really small
+
+but we can use the same image but larger 
+using bg-paper@2x
+
+##background-attachment
+now we are going to switch to another background image then we are going to add a heading to the page 
+then we are going to increase the height of the body so we can scroll
+
+now the image has grown larger so the image is trying to cover the page
+but we are not going to worry about this at the moment 
+
+notice that when we scroll the image moves with us
+to stop this we use this property and give it a value of fix
+now the content is the only thing tht is moving 
+and the image is smaller
+
+this is beacuse it is set to 100% of the viewport and not 300vh

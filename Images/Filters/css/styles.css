@@ -1,0 +1,12 @@
+html{
+    font-size: 62.5%;
+}
+
+.meal:hover {
+    /* * grayscale is a function we can add values or keywords */
+    /* * we can add multiple filters on this property */
+    filter: 
+            grayscale(70%)
+            blur(3px)
+    ;
+}

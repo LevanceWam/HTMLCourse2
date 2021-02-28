@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Art Direction </title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- * setting a media condition to help us show the right image  -->
+    <picture>
+        <!-- * this is for the mobile view -->
+        <source media="(max-width:500px)" srcset="images/meal-cropped.jpg">
+        <!-- * this is for anything that is not mobile -->
+        <source media="(min-width:501px)" srcset="images/meal.jpg">
+        <!-- * remember to add this for the browser that do not support the picture element -->
+        <img src="images/meal.jpg" alt="">
+    </picture>
+</body>
+
+</html>

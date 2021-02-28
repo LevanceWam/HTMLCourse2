@@ -1,0 +1,29 @@
+This is the notes for FontIcons
+
+There is another way for displaying icons 
+we can use something called icon fonts 
+this are special fonts 
+
+some of the most popular font icons are:
+    - FontAwesome
+    - Ionicons
+    - Material design icons 
+
+those are the most popular ones 
+on this lecture we are going to see how to use FontAwesome
+
+first we need to go to https://fontawesome.com/
+they have a free plan and a pro plan 
+
+so we need to hit start and create a kit package 
+and configure the setting to the project 
+
+then when we are ready to use we need to save the changes and then 
+at the top go to how to use and copy the script element and place it in th head section
+of our html
+
+now that we added the script tag we can add one or more icons 
+
+now we are going to use a icon 
+then change the color and size of it 
+

@@ -1,0 +1,38 @@
+This is the notes for Image Types and Formats
+
+lets look into image types and formats 
+in computers we have 2 types of images 
+
+* raster
+    these images are made up of pixels 
+    raster images are used for photos 
+
+* vector 
+    which are defined by a set of mathematical vectors like lines 
+    and curves
+    vector images are used for simple graphics, icon, logos etc
+
+##Raster
+    - comes from cameras and scanners and they can be produced by software 
+    - formats: jpg, png, gif, etc
+    - more pixels = larger images 
+        * on the web we do not want to serve large images this can take a long time to download
+    - looks blurry if scaled up
+        * so we don't want to serve up small images 
+    
+##vector
+    - created in software (illustrator)
+    - format: SVG
+    - Scalable Vector Graphics
+    - look sharp at any size 
+        *this is because they are not made of pixels 
+
+##Raster Image formats 
+here are some of the common ones 
+    - jpg
+    - gif
+    - png
+    - webp
+        * this is a modern image format a lot of people are not familiar with 
+        they are commonly short in size, but webp is not supported in internet explorer
+

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Supporting High-Density screens </title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- * base image 400 x 400 -->
+    <img src="images/meal.jpg" alt="bowl of salmon and curry" class='meal'>
+
+    <!-- * this image is going to be a little bit sharper -->
+    <!-- * because mac logical resolution is at 2x -->
+    <img src="images/meal.jpg" alt="bowl of salmon and curry" class='meal' srcset="images/meal.jpg 1x,
+            images/meal@2x.jpg 2x,
+            images/meal@3x.jpg 3x ">
+</body>
+
+</html>

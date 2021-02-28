@@ -1,0 +1,61 @@
+This is the notes for ResolutionSwitching
+
+sometimes we are going to want to provide different 
+images for mobile, tablets, and laptops
+
+this is called the ResolutionSwitching problem 
+lets tackle this scenario
+
+so working off of the last lecture 
+we notice that we set the width too 400px
+and provide 3 different versions for standard and high density screens 
+
+standard and high density screens have different resolutions 
+now if the image was going to be displayed at exactly the same size across 
+these devices this wouldn't be a problem
+
+but if we changed it to a relative unit then we have a problem 
+because of the current implementation we are going to supply the same image to all the device we saw in the 
+previous slide 
+
+so we are going to get the same image on each device 
+which is 800x800
+
+now the browser on each device has to resize the image 
+so it takes up 100% of the width of the viewport
+
+this resizing operation can be costly to the browser 
+the larger this image the more costly this operation is going to be 
+because the browser has to load the entire image in the memory in order to resize it 
+this is the resolution switching problem
+
+## fixing the problem
+so in html instead of providing 1x and etc we are going to 
+provide the width of the image like 400w 
+
+the w unit is used to represent the actual width of the image
+so at this point we do not care about the physical or logical resolution of the screen
+we are telling the browser we have this image with this width
+
+now the browser will pick the correct image based on the resolution and pixel ratio of the screen 
+but we can take this to the next level 
+
+lets say on mobile we want the image to take up the entire width of the page 
+on a tablet half of the page and on the desktop a 3rd of the page 
+we are going to implent this without using media queries 
+this is because the width that we apply to a image impact the browsers decision to pick the right file 
+
+##sizes attribute 
+so we need to get rid of the rule on meal in css 
+
+next we are going to add the sizes attribute to the image element 
+so we are going to use media conditions to help us use the correct image for each size
+
+##picking a size 
+The image size that we used In this lecture was arbitrary so we do not need to always use the sizes shown in this demo
+instead we can go to :
+https://www.responsivebreakpoints.com/ 
+
+this can help us decide on the sizes and generate image assets
+
+we can upload a file here and it will generate our image assets according to the settings on the page we set 

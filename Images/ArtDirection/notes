@@ -1,0 +1,18 @@
+This is the notes for ArtDirection 
+
+there are going to be times we are going to want to show 
+cropped or zoomed in parts of an image for certian screen sizes 
+
+this is what we call art direction 
+
+##Art direction 
+we are going to attempt this files we have 
+
+to implement art direction we are going to use the picture element 
+last time we used this element we use the source element with the 
+type attribute 
+
+this time we are going to use the media attribute 
+we are going to write a media condition for the max width of 500px for mobile 
+
+so when we resize the page we will see the difference 
