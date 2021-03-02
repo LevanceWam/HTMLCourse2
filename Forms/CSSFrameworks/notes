@@ -26,4 +26,8 @@ hit the download button and we are going to use the
 cdn (content delivery network)
 cdn are a bunch of servers around the world optimized for delivering js files images and so on 
 
-we are going to copy the link and paste it under the 
+we are going to copy the link and paste it under our css 
+remove any previous styles that might be there 
+
+we are going to need to nevigate to the docs and look at how to use bootstrap
+all we have to do is apply classes to the elements
