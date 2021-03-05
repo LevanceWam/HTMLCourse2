@@ -1,1 +1,66 @@
-This is the notes for TextFields
+This is the notes for TextField
+
+in this lesson we are going to take a look at text fields 
+so we created a simple form with a input field of text 
+since we are using milligram the text box is taking up whole
+screen 
+
+we can apply a a style to our form element and give it a width 
+and padding so we can see the input better  
+
+##different types of input 
+
+if we change the type to:
+    - number 
+        * the input field will only accept numbers and 
+        will have a little buttons for changing the values 
+        
+        *this is benefical for mobile and tablets the keyboard
+        that comes up will only show numbers
+    
+    - password
+        * whatever is typed in the field will be masked 
+
+    - date
+        * since we are using milligram we get a calender icon when clicked on 
+        pulls up a calendar
+
+    - email
+        * same as before only able to type a valid email
+
+    - textarea (its it own element )
+        * for being able to type more than one line in a text field
+
+        * the attribute cols is for the amount of characters in a line 
+        rows is the number of lines
+
+
+here is a list of more input types 
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
+
+## input attributes 
+
+input has a couple of attributes we need to be aware of:
+
+    - value 
+        * this is used to prepopulate a input field 
+    
+    - placeholder 
+        * when the input field is empty we see a label in the input field
+        but when we type in it, it disappears
+    
+    - readonly
+        * can not change the value inside of the field
+
+    - disable 
+        * can not select the fields and the when form is submitted this value will not be submitted 
+
+    - maxlength and minlength
+        * validation purposes
+
+    - autofocus
+        * this is a boolean attribute this does not need a value 
+        when the page loads this input will automatically be focused 
+
+with textarea we share the same attributes expect for value 
+so inorder to prepopulate it we type inbetween the tags
