@@ -1,0 +1,32 @@
+This is the notes for DataList
+
+lets implement a suggestion list in html
+we want a list of suggestions after we start typing in the input field 
+so first we need to define a data list 
+
+##datalist element
+inside of the list we are going to add a bunch of options 
+so for this demo we are going to use countries 
+
+now we want to associate the data list with the input field
+first we need to give it a unique identifer or id 
+
+then we need to use the list attribute to connect the input to the list 
+
+now in the browser when we focus on the list we can see that list of items 
+a lot of people are not familiar with this 
+they reach out to 3rd parties for this 
+
+the user can still type other values that are not on the list 
+to stop them from doing just that we use a dropdown list 
+
+##values
+now when we choose something from the list we want to send a numeric value to the server 
+this can help us know what value was selected by the user say if we are using a database 
+
+by using data-value attribute this is a custom attribute 
+we can use this with javascript we can read the value of this attribute and submit it to the server 
+
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist
+this is for customing datalist 
