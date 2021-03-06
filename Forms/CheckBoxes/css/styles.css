@@ -1,0 +1,13 @@
+html{
+    font-size: 62.5%;
+}
+
+form {
+    width: 50%;
+    padding: 2rem;
+}
+
+textarea{
+    /*  * this stops us from being able to resize the textarea element  */
+    resize: none;
+}

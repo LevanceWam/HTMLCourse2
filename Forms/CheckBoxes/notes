@@ -1,0 +1,12 @@
+this is the notes for CheckBoxes
+
+in this demo we are going to be working with check boxes 
+
+so first we make a input element and set its type to check box
+with check boxes the label needs to come right after it
+
+we are going to but these elements in a container together so they can 
+be stacked vertically  
+
+to have a check box checked by default we need to use the boolean attribute 
+"checked"
