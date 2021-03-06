@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Drop-down List </title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+</head>
+
+<body>
+    <form>
+        <!-- * this attribute allowa us to select multiple options  -->
+        <select multiple>
+            <option value=""></option>
+            <optgroup label="Frontend courses">
+                <!-- * this boolean attribute lets us select this option by default -->
+                <option value="1" selected>HTML</option>
+                <option value="2">CSS</option>
+                <option value="3">JS</option>
+            </optgroup>
+
+            <optgroup label="Backend courses">
+                <option value="4">Node.js</option>
+                <option value="5">ASP.NET</option>
+                <option value="6">Django</option>
+            </optgroup>
+        </select>
+    </form>
+</body>
+
+</html>
