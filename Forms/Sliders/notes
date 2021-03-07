@@ -1,0 +1,19 @@
+This is the notes for Sliders
+
+there are times we are going to want to show the user a numeric value with a slider 
+
+to do this we define a input with the type of range
+for this input we do not need the name attribute 
+
+the attributes we do use are;
+    - min
+    - max
+    - value
+
+now to show the value we can not do that with plain HTML and CSS 
+we need javascript
+
+all we would have to do is listen to the current changes in the value of the slider 
+then we can read the current value and display it somewhere else in a label 
+
+this is a cool test to try on our own 
