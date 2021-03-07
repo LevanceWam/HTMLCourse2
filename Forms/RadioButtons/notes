@@ -1,0 +1,14 @@
+This is the notes for RadioButtons
+
+With check boxes the user can select multiple items 
+but sometimes we want to limit them to a single item 
+for this we can use a radio buttons or a drop down list
+in this demo we are going to be looking at a radio button 
+
+to implement this we set the input type to radio
+the name attribute for this input is used to 
+for grouping mutliple radio buttons 
+
+so now that we have 2 radio buttons in the same group we can only select one of the buttons 
+
+we can also preselect a radio button by using "checked"
