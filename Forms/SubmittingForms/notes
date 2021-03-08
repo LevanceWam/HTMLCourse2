@@ -47,6 +47,7 @@ there are 2 attributes that we need to know
         instead they are going to be appended to the target url 
         this method is used when we want to bookmark the url so we can always come back to it 
         an example of this is google
+        
 
 each input field needs to have a name attribute
 once they are there we can submit something on the form 
