@@ -1,0 +1,61 @@
+This is the notes for SubmittingForms
+
+now lets see how to submit a form!
+
+lets say we aare going to build a contact form with a name and 
+email
+
+** note **
+
+there are to ways to make a button 
+    - using the button element 
+    - using the input type submit 
+
+the difference is that using the input we can not use a icon
+but the button element will let us 
+
+##submitting the form
+there are 2 attributes that we need to know 
+
+    - action
+        * this is where we are going to send the data 
+        so we need to type a relative or absolute url 
+        
+        this is where server side techology come into the picture 
+
+    ## server-side technology
+    there are plenty of server side technologies out there like 
+        - node/express
+        - django 
+        - ASP.NET
+        - Laravel
+        - Ruby on Rails 
+
+    the server we use depends on the language that we use 
+    to keep things simple we are going to use formspree
+    https://formspree.io/f/xgepgeee
+    the backend is built for us so all we have to do is copy the url and put it in the action
+
+    - method
+        * this is the second attribute 
+        the value for this can be either GET or POST 
+
+        * when we use POST the current fields and their values will be included in the 
+        body of the request 
+
+        * when we use GET the fields will not be include in the body of the request 
+        instead they are going to be appended to the target url 
+        this method is used when we want to bookmark the url so we can always come back to it 
+        an example of this is google
+
+each input field needs to have a name attribute
+once they are there we can submit something on the form 
+we can look at formspree and see the submission
+and we can see it to the email connected
+
+formspree makes things easier we don't have to build the back end and 
+we can intergate with different services 
+
+
+
+
