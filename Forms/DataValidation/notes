@@ -1,0 +1,36 @@
+This is the notes for DataValidation
+
+before we submit a form we should always validate the data 
+and make sure it is in the right shape 
+
+some examples are:
+    - Required fields
+        * this is to make sure the field is filled out
+    - emails
+        * make sure that they are valid
+    - numbers 
+    - dates
+
+a lot of hackers like to provide invalid values to see if they can break anything 
+they can enter a negative value for the age or a long string for the value 
+
+##Html5 elements
+now html 5 elements come with built in validation 
+so we can perform basic checks but for more advance stuff we need to use javascript
+so lets take a look at the built in  validation 
+
+for the text input  and add the boolean attribute required 
+to make the field required
+
+minlength and maxlength are explaintory 
+
+##email validation
+
+for email types we can use the attributes above and 
+it also checks to see if we follow the email format
+
+## dates
+for date it checks to make sure we have a valid date 
+
+##numbers
+numbers use min and max instead of minlength and maxlength
