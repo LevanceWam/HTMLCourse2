@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Grouping Related Fields </title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+</head>
+
+<body>
+    <form>
+        <!-- * grouping related fields -->
+        <fieldset>
+            <!-- * this is the label for the group -->
+            <legend>Billing Address</legend>
+            <input type="text">
+            <input type="text">
+            <input type="text">
+        </fieldset>
+
+        <fieldset>
+            <!-- * this is the label for the group -->
+            <legend>Payment</legend>
+            <input type="text">
+            <input type="text">
+            <input type="text">
+        </fieldset>
+
+        <!-- * some people like to use a section and a h2 instead of what we have above and this is also valid -->
+        <section>
+            <h2>Name</h2>
+            <input type="text">
+            <input type="text">
+            <input type="text">
+        </section>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+This is the notes for FileInputs
+
+What if we wanted to allow the user to select one or more files?
+
+to do this we set input to the type of "file"
+this allows us to go ti the hard drive and select files 
+
+here are some attributes we need to know about 
+    - multiple
+        * this allows the user to select multiple files 
+    - accept
+        * this allows use to tell the user what kind of files we can accept

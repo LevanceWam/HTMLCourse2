@@ -1,0 +1,33 @@
+This is the notes for StylingForms
+
+Now we are  going to add some rules to the form 
+
+##form style
+first we are going to take the input field and put it under its label
+we can do this by changing the display to
+block 
+this will move the  input field under the label 
+this is because block elements take up the entire width of the page 
+
+There is a problem here though we are violationg the 
+law of proximity, this law states that humans see things close together as connected
+
+since we have the form controls in divs we are going to 
+give them a class and add some margin
+
+## input field styles
+
+we have to be careful when applying rules to the 
+input element because this affects all inputs regardless of type
+so this is a good time to use the attribute selector
+
+now we are going to want to target the focus on the input element 
+but when we do it the normal way using the :focus psuedo selector nothing happens 
+this is because the border that is set by default on chrome and other browsers are being displayed 
+
+to stop this set the outline property tpo 0
+
+now we are going to add a box shadow to make it look more readable 
+
+##buttons
+

@@ -1,0 +1,33 @@
+This is the notes for CSSFrameworks
+
+what we lerned in the previous section is that styling a form can be 
+a bit time consuming  this is where a lot of people use CSSFrameworks
+
+## Framework
+A Framework is essentially a library of css code  that we can 
+reuse to build modern looking websites 
+there are plenty of frameworks out there like 
+    - bootstrap (most popular)
+    - foundation
+    - semantic UI
+    - UI kit 
+    - materialize 
+    - miligram
+and plenty more 
+
+frameworks comes with a lot of code that needs to be downloaded to the users computer 
+this is one of the reasons people dont like to use them 
+
+in this lecture we are going to look at the differences of bootstrap and milligram 
+and from here on we are going to be using milligram in the lectures 
+
+first we need to head to: https://getbootstrap.com/
+hit the download button and we are going to use the 
+cdn (content delivery network)
+cdn are a bunch of servers around the world optimized for delivering js files images and so on 
+
+we are going to copy the link and paste it under our css 
+remove any previous styles that might be there 
+
+we are going to need to nevigate to the docs and look at how to use bootstrap
+all we have to do is apply classes to the elements

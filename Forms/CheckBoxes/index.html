@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Check Boxes </title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+</head>
+
+<body>
+    <form>
+        <div>
+            <input type="checkbox" id="frontend" disabled>
+            <!-- * milligram makes the label element a block element so we need to use this class to make it inline  -->
+            <label class="label-inline" for="frontend">Front-end</label>
+        </div>
+        <div>
+            <!-- * this is a boolean attribute to make this checked by default -->
+            <input type="checkbox" id="backend" checked>
+            <!-- * milligram makes the label element a block element so we need to use this class to make it inline  -->
+            <label class="label-inline" for="backend">Back-end</label>
+        </div>
+    </form>
+</body>
+
+</html>

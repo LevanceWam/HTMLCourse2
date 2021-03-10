@@ -1,0 +1,24 @@
+This is the notes for drop down list 
+
+In this demo we are going to be working with
+DropdownList
+
+##select element
+inside of this element we can have multiple option elements
+this is used the same way we used it in the data list lecture 
+
+we are going to leave the first option blank because
+we are going to make this list optional the user does not have 
+to select a value
+
+now there are times we are going to want to select an option by default 
+like if the user choose a course previously and we loaded that 
+to so this we add the selected attribute to the option 
+this is a boolean attribute  
+
+We can allow the user to select multiple options 
+so on the select opening tag we add the multiple attribute this is another 
+boolean attribute 
+
+##optgroup
+this is the option group element this allows us to catergories our options 

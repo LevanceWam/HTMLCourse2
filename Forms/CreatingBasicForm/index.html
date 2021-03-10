@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Creating Basic Forms </title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <form>
+        <!-- * the for attribute is associating itself with the input field -->
+        <!-- * now when we click on the label the input field associated will be focused on -->
+        <div>
+            <label for="name">name</label>
+            <input id="name" type="text">
+        </div>
+
+        <!-- * by wrapping these elements in a div they will appear vertically on the page -->
+        <div>
+            <label for="email">name</label>
+            <input id="email" type="email">
+        </div>
+
+        <!-- * the reset type clears the form  -->
+        <button type="submit">register</button>
+        <button type="reset">clear</button>
+    </form>
+</body>
+
+</html>

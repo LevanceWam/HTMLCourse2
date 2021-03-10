@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Radio Buttons </title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+</head>
+
+<body>
+    <form>
+        <!-- * because we are using the name attribute to group the buttons this allows us to pick only one of the options  -->
+        <div>
+            <!-- * preselected the radio button -->
+            <input type="radio" name="membership" id="silver" checked>
+            <label for="silver" class="label-inline">Silver</label>
+        </div>
+        <div>
+            <input type="radio" name="membership" id="gold" disabled>
+            <label for="gold" class="label-inline">Gold</label>
+        </div>
+    </form>
+</body>
+
+</html>

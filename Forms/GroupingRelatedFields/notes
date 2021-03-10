@@ -1,0 +1,12 @@
+this is the notes for GroupingRelatedFields
+
+As our forms get more and more complex we need to group
+these related fields into logical containers 
+this is where we use the fieldset element 
+
+so in the fieldset element we need to add the legend element this is the label for the group
+
+now in this section we can have one or more input groups
+
+now some people like to use the section element and the h2 element instead
+this is also another way of doing things
