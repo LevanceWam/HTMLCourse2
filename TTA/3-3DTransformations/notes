@@ -1,0 +1,41 @@
+This is the notes for 3-3DTransformations
+
+now we are going to be looking into 3d transformations 
+
+in the last demo we saw we can move our box along the x and y access
+but we can also move it along the z axis 
+and the z axis is a line that comes from the screen towards our eyes
+
+##transform property
+so we are going to use the transform property again 
+
+###translateZ
+so this time we are going to look at translate z 
+if we pass a positive value the box will move closer to us 
+
+now nothing is going to happen right away because we didn't 
+set the perspective
+
+###perspective
+this function needs to go before we call our function so we can define a virtual space 
+so this space gives us a distance between us and the element 
+
+###3d rotating
+by default when we use rotate we are rotating on the z axis 
+but if we where to use:
+    - rotateX
+    - rotateY 
+we will see a 3d transformation
+
+**Question:
+    Where is the origin of the rotation?
+    ans:
+        From the center of the element 
+
+we can move the origin of the rotation by using 
+transform-origin property
+
+##multiple transformations
+lets say we want to transform multiple elements
+we would have to wrap them in a container 
+
