@@ -1,0 +1,36 @@
+This is the notes for Transitions
+
+as we may have notice that our transitions happen so fast and 
+suddenly we should fix that 
+
+##transition property
+we can use the transition property to animate one or more properties 
+
+notice that we are applying this property to the box itself
+and not the hover state with the Transformation
+
+so we are going to animate the transform property 
+because this is the property we are updating when we are hovering over the box
+
+now optionally we can supply a timing function 
+the default function is linear 
+this means that the animation is going progress at a linear rate 
+
+but we also have:
+    - ease-in
+        * this animation starts slowly and then progresses
+        quiclky
+    - ease-out
+        * the opposite of ease-in starts quick and ends slow 
+    - cubic-bezier
+        * this is a custom curve specified by us 
+        we can go to: https://cubic-bezier.com/#.17,.67,.83,.67
+        we can create a custom cubic-bezier curve easily
+
+
+##delays
+optionally we can supply a delay so the animation can start a second or so after 
+we hover over the box
+
+##animating multiple properties
+so lets say we want to change the color of the back ground of our box
