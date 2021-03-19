@@ -16,6 +16,10 @@ body{
 .footer-content{
     background: rgb(116,214,144);
     background: linear-gradient(0deg, rgba(116,214,144,1) 0%, rgba(92,191,187,0.9850315126050421) 80%);
+    padding:20px 40px;
+    display: flex;
+    align-items: center;
+    color:whitesmoke;
 }
 
 
@@ -26,5 +30,7 @@ body{
 img{
     width: 60px;
     height: 60px;
+    border: solid 5px white;
     border-radius: 50%;
+    margin: 0 1rem;
 }
