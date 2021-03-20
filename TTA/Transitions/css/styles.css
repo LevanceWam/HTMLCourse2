@@ -1,0 +1,28 @@
+html{
+    font-size: 62.5%;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: gold;
+    /* * here we are targeting the property we want to animate and for how long */
+    /* * we supplied a timing function to change the animation progress rate */
+    /* * we aslo supplied a delay to the animation after the timing function */
+    /* * animating multiple properties we seperate them with commas */
+    transition:transform 0.5s cubic-bezier(.68,.51,0,.63) 1s, 
+    background 0.5s ease-in 1s;
+}
+
+.box:hover{
+    transform: rotate(45deg);
+    background-color: dodgerblue;
+}
+

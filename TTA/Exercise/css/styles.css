@@ -1,0 +1,50 @@
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 2rem;
+}
+
+.card{
+    max-width: 500px;
+    transform: rotate(-5deg);
+    border-radius: 30px;
+    overflow: hidden;
+    margin: 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    line-height: 1.5;
+    transition: transform .5s linear;
+}
+
+.card-content{
+    padding: 2rem;
+}
+
+.footer-content{
+    background: rgb(116,214,144);
+    background: linear-gradient(0deg, rgba(116,214,144,1) 0%, rgba(92,191,187,0.9850315126050421) 80%);
+    padding:20px 40px;
+    display: flex;
+    align-items: center;
+    color:whitesmoke;
+}
+
+
+.card:hover{
+    transform: rotate(0);  
+}
+
+img{
+    width: 60px;
+    height: 60px;
+    border: solid 5px white;
+    border-radius: 50%;
+    margin: 0 1rem;
+    transition: transform .5s linear;
+}
+
+.card:hover img{
+    transform: scale(1.15);
+}

@@ -1,0 +1,22 @@
+This is the notes for ReusableAnimations
+
+in the last lecture we learned how to use the animate property
+
+Now what if we wanted to add the same animation to another element
+we don't want to repeat the same properties for different elements
+
+so lets look into creating reusable animations 
+
+so first we are going to create a class 
+then move all of the properties that have to deal with animation into this class
+now if we have a element we need to animate all we have to do is add the class to the element
+in the html
+
+Now here is something cool:
+if we go to https://animate.style/
+we can find a bunch of beautiful and reusable animations
+
+to use this all we need to do is get the style sheet and use their classes in our markup
+
+next to start using the animations we need to add to class
+one for the general use for all of the animations and the second class determines the kind of animation

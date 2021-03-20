@@ -1,0 +1,36 @@
+This is the notes for Transformations
+
+Now we are going to take a look at Transformations
+in css we have a bunch of functions for transforming elements
+such as:
+    - rotate()
+    - scale()
+    - skew()
+    - translate()
+
+We are going to apply our transformations to the hover affect so 
+we can see them clearly
+
+##transform property
+    * rotate function
+        so we are going to add this property and add the rotate function
+        we are going to rotate it 15deg clockwise
+        if we set it to negative it will go counter clockwise
+
+    * scale function   
+        this function is going to make our box smaller or bigger 
+
+    * skew function 
+        this function is going to make the box skew to the left or the right 
+
+    * translate function 
+        this function is going to move the box on the screen  along the horizontal and vertical axis 
+
+now we might be wondering why use the translate function when we have absolute and relative positioning 
+there are 2 reasons for this 
+    1. it is easier to position elements using the translate function
+    2. this function uses hardware acceleration we get better performance when moving a element 
+    as a animation 
+
+also we can combine the functions in the transform property
+but it is very important to know that the order of these functions is important because they all have different results 

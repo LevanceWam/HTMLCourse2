@@ -1,0 +1,16 @@
+this is the notes for Animations
+
+in the last lecture we looked at using transitions for simple animations 
+but for the more complex animations we need to use the animate property
+
+##animate property
+first we are going to want to define a bunch of key frames 
+our css animations can have several frames 
+
+so we need to use the @keyframes rule 
+to define a bunch of keyframes
+next we type a name for the animation
+we want to create 
+
+for each keyframe we specify a percentage of the time
+through the animation sequence 
