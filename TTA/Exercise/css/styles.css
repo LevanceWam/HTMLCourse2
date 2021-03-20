@@ -7,10 +7,18 @@ body{
 }
 
 .card{
-    width: 500px;
+    max-width: 500px;
     transform: rotate(-5deg);
     border-radius: 30px;
     overflow: hidden;
+    margin: 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.card-content{
+    padding: 2rem;
 }
 
 .footer-content{
