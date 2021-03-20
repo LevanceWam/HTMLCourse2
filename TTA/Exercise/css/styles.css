@@ -15,6 +15,7 @@ body{
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     line-height: 1.5;
+    transition: transform .5s linear;
 }
 
 .card-content{
@@ -41,4 +42,9 @@ img{
     border: solid 5px white;
     border-radius: 50%;
     margin: 0 1rem;
+    transition: transform .5s linear;
+}
+
+.card:hover img{
+    transform: scale(1.15);
 }
