@@ -8,3 +8,4 @@ Topics we are going to look into:
 - CSS variables 
 - Object-oriented CSS
 - BEM
+
