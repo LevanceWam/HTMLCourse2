@@ -1,0 +1,22 @@
+This is the notes for Variables
+
+we are going to look into css variables 
+
+css variables are also known as custom properties to 
+keep our code DRY
+
+so we created 2 divs with classes and set them to the same color 
+this is a very common problem in a lot of stylesheets 
+
+this is where we can use css variables to get rid of duplications 
+
+at the top of the stylesheet we use the root psuedo class selector
+
+##:root selector
+this selector matches the html element  
+this is where we can define custom properties or global variables 
+
+the property should start with '--' 
+we can store anything in these properties 
+
+all of these properties can be inherited by the DOM
