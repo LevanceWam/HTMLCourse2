@@ -20,3 +20,5 @@ the property should start with '--'
 we can store anything in these properties 
 
 all of these properties can be inherited by the DOM
+
+to access them we need to use the var function 
