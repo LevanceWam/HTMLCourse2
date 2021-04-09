@@ -1,1 +1,36 @@
 This is the notes for Object-orientedCSS
+
+Do we remember that OOP is a set of principles for creating reusable components.
+we have the same concept in CSS, we can structure our styles and make them usable 
+if we reuse our styles we dont have to repeat them over and over 
+
+Object Oriented CSS is based on 2 very simple principles 
+    * Seperate container from content
+
+        for this we are going to create a banner in the hero section 
+
+        # now what if we wanted to create the same button in another section 
+        like a sidebar but we notice that the buttin does not inherit the styles one way to solve is to duplicate the 
+        hero properties and change the name of the target class'
+        but this makes our code messy
+
+        this is where this principle comes into play
+        this is where we need to seperate the container from the content
+
+        in this example btn is the content and hero or side-bar are the container 
+        we are going to want to seperate the content from the container
+        so we just remove the parent element 
+
+        now where ever we put the button it is always going to look the same 
+
+    * Seperate structure and skin 
+
+        now lets say we wanted to make the sidebar button blue 
+        instead of duplicating it we can use the second principle 
+
+        the second principle says we want to seperate the skin from the structure 
+        so we are going to want to have a button class that purely defines the structure 
+        so we would remove the background color property from 
+        the .btn class  then make another class to define the color of the skin
+
+        
