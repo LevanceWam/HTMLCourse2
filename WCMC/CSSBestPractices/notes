@@ -1,0 +1,43 @@
+This is the notes for CSSBestPractices
+
+we are going to look at 8 techniques to help us write cleaner 
+and more maintainable CSS. 
+
+    - Following a name convention consistly
+        * we can use something called kebab case: where we 
+        seperate the words using a hyphen
+        * camelcase
+        * pascal
+        * underscore
+    the point in this is that we need to stick to one of these and 
+    define a guildline for the team to foolow
+
+    - Create logical sections in the stylesheet
+        * for larger projects we are going to want to 
+        split a stylesheet into multiple stylesheet and combine them together
+        this is where CSS preprocessor tools like SASS and LESS come in 
+
+        * for a small project we do not want to write all the styles in one place we are going to 
+        want to seperate them in different containers
+        so we would break up the stylesheet into sections and write rules for just those sections 
+        like for typography, colors, basic styles 
+
+    - Avoid over-specific selectors
+        * this is a common problem 
+        * we do not want to make rules for overspecified selectors 
+        this is going to be hard to keep track and maintain 
+
+    - Avoid the !important keyword 
+        * avoid this as much as possible 
+        * using it could mean that we have a overly specificed selector somewhere 
+
+    - Sort CSS properties 
+        * this isn't super important but could help make things look a little nicer 
+        * hit command shift p and type in sort to do this easily 
+
+    - Take advantage of style inheritance 
+
+    - Extract repetitive patterns in the stylesheet
+        * this is apart of object oriented CSS we will look into this later 
+
+    - Avoid repitive values (Keep it DRY)

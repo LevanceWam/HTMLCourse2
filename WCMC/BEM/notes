@@ -1,0 +1,16 @@
+This is the notes for BEM
+
+BEM is a popular naming convention which is short for 
+Block element modifier
+
+the idea of BEM is to think of our webpage ad a bunch of blocks or components or modules 
+these blocks contains elements and they can be modified 
+
+we are going to use the BEM naming convention for naming classes for the blocks 
+
+these blocks can be reused and modified to our liking
+so if we create a bunch of cards we can modify certian ones 
+we use a modifier to modify the blocks 
+
+modifiers are written like this card--color
+blocks are card__color

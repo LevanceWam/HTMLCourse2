@@ -1,0 +1,22 @@
+/* * this is a pseudo class selector */
+/* * here we can define custom properties or global variables */
+:root{
+    --primary-color: #ffdd36;
+    --border-radius:10px;
+    --border-size:2px;
+    /* * these custom properties can be inhertied by all elements in the DOM */
+}
+
+html{
+    font-size: 62.5%;
+}
+
+
+.one{
+    /* * we use the var function to use the variable  */
+    background: var(--primary-color);
+}
+
+.two{
+    background: var(--primary-color);
+}
